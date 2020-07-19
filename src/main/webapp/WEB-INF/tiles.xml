@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+        "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+        "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+
+    <definition name="base.definition"
+                template="/WEB-INF/pages/layouts/layout.jsp">
+        <put-attribute name="title" value="" />
+        <put-attribute name="header" value="/WEB-INF/pages/head.jsp" />
+        <put-attribute name="head" value="/WEB-INF/pages/header.jsp"></put-attribute>
+        <put-attribute name="menu" value="/WEB-INF/pages/navbar.jsp" />
+        <put-attribute name="body" value="" />
+    </definition>
+
+
+    <definition name="home" extends="base.definition">
+        <put-attribute name="title" value="Home" />
+        <put-attribute name="body" value="/WEB-INF/pages/home.jsp" />
+    </definition>
+
+    <definition name="examprocess" extends="base.definition">
+        <put-attribute name="title" value="Home" />
+        <put-attribute name="body" value="/WEB-INF/pages/exams/examprocessing.jsp" />
+    </definition>
+
+    <definition name="student" extends="base.definition">
+        <put-attribute name="title" value="Student Information" />
+        <put-attribute name="body" value="/WEB-INF/pages/students/student.jsp" />
+    </definition>
+
+    <definition name="comments" extends="base.definition">
+        <put-attribute name="title" value="Student Information" />
+        <put-attribute name="body" value="/WEB-INF/pages/exams/customremarks.jsp" />
+    </definition>
+
+    <definition name="combine" extends="base.definition">
+        <put-attribute name="title" value="Student Information" />
+        <put-attribute name="body" value="/WEB-INF/pages/exams/combine.jsp" />
+    </definition>
+
+    <definition name="registry" extends="base.definition">
+        <put-attribute name="title" value="Student Information" />
+        <put-attribute name="body" value="/WEB-INF/pages/api/registry.jsp" />
+    </definition>
+    <definition name="view" extends="base.definition">
+        <put-attribute name="title" value="Student Information" />
+        <put-attribute name="body" value="/WEB-INF/pages/api/view.jsp" />
+    </definition>
+
+    <definition name="reports" extends="base.definition">
+        <put-attribute name="title" value="Student Information" />
+        <put-attribute name="body" value="/WEB-INF/pages/reports/reports.jsp" />
+    </definition>
+
+    <definition name="parent" extends="base.definition">
+        <put-attribute name="title" value="Parent Information" />
+        <put-attribute name="body" value="/WEB-INF/pages/students/parent.jsp" />
+    </definition>
+
+    <definition name="setup" extends="base.definition">
+        <put-attribute name="title" value="Parent Information" />
+        <put-attribute name="body" value="/WEB-INF/pages/setups/studentsetup.jsp" />
+    </definition>
+
+    <definition name="locale" extends="base.definition">
+        <put-attribute name="title" value="com.high.school.Locale.model.Location Information" />
+        <put-attribute name="body" value="/WEB-INF/pages/setups/locality.jsp" />
+    </definition>
+
+    <definition name="health" extends="base.definition">
+        <put-attribute name="title" value="Health Information" />
+        <put-attribute name="body" value="/WEB-INF/pages/setups/health.jsp" />
+    </definition>
+
+    <definition name="class" extends="base.definition">
+        <put-attribute name="title" value="Class Information" />
+        <put-attribute name="body" value="/WEB-INF/pages/setups/class.jsp" />
+    </definition>
+
+    <definition name="term" extends="base.definition">
+        <put-attribute name="title" value="Term Information" />
+        <put-attribute name="body" value="/WEB-INF/pages/setups/term.jsp" />
+    </definition>
+
+    <definition name="fee" extends="base.definition">
+        <put-attribute name="title" value="Fee Information" />
+        <put-attribute name="body" value="/WEB-INF/pages/setups/fee.jsp" />
+    </definition>
+
+    <definition name="house" extends="base.definition">
+        <put-attribute name="title" value="House Information" />
+        <put-attribute name="body" value="/WEB-INF/pages/setups/house.jsp" />
+    </definition>
+
+    <definition name="religion" extends="base.definition">
+        <put-attribute name="title" value="Religion Information" />
+        <put-attribute name="body" value="/WEB-INF/pages/setups/religion.jsp" />
+    </definition>
+
+    <definition name="source" extends="base.definition">
+        <put-attribute name="title" value="Source Information" />
+        <put-attribute name="body" value="/WEB-INF/pages/setups/sources.jsp" />
+    </definition>
+
+    <definition name="docs" extends="base.definition">
+        <put-attribute name="title" value="Document Information" />
+        <put-attribute name="body" value="/WEB-INF/pages/setups/document.jsp" />
+    </definition>
+
+    <definition name="proffession" extends="base.definition">
+        <put-attribute name="title" value="Document Information" />
+        <put-attribute name="body" value="/WEB-INF/pages/setups/proffesion.jsp" />
+    </definition>
+
+    <definition name="block" extends="base.definition">
+        <put-attribute name="title" value="Document Information" />
+        <put-attribute name="body" value="/WEB-INF/pages/setups/block.jsp" />
+    </definition>
+
+    <definition name="year" extends="base.definition">
+        <put-attribute name="title" value="Document Information" />
+        <put-attribute name="body" value="/WEB-INF/pages/setups/year.jsp" />
+    </definition>
+
+    <definition name="parentForm" extends="base.definition">
+        <put-attribute name="title" value="Parent Information" />
+        <put-attribute name="body" value="/WEB-INF/pages/students/parentForm.jsp" />
+    </definition>
+
+    <definition name="stddocs" extends="base.definition">
+        <put-attribute name="title" value="Parent Information" />
+        <put-attribute name="body" value="/WEB-INF/pages/students/studentdocs.jsp" />
+    </definition>
+
+    <definition name="status" extends="base.definition">
+        <put-attribute name="title" value="Status Information" />
+        <put-attribute name="body" value="/WEB-INF/pages/setups/studstatus.jsp" />
+    </definition>
+
+    <definition name="school" extends="base.definition">
+        <put-attribute name="title" value="Status Information" />
+        <put-attribute name="body" value="/WEB-INF/pages/institution/school.jsp" />
+    </definition>
+
+    <definition name="leaveouts" extends="base.definition">
+        <put-attribute name="title" value="Leaveout Information" />
+        <put-attribute name="body" value="/WEB-INF/pages/students/leaveouts.jsp" />
+    </definition>
+
+    <definition name="subjects" extends="base.definition">
+        <put-attribute name="title" value="Leaveout Information" />
+        <put-attribute name="body" value="/WEB-INF/pages/setups/subjects.jsp" />
+    </definition>
+
+    <definition name="department" extends="base.definition">
+        <put-attribute name="title" value="Leaveout Information" />
+        <put-attribute name="body" value="/WEB-INF/pages/setups/departments.jsp" />
+    </definition>
+
+    <definition name="titles" extends="base.definition">
+        <put-attribute name="title" value="Leaveout Information" />
+        <put-attribute name="body" value="/WEB-INF/pages/academics/titles.jsp" />
+    </definition>
+
+    <definition name="responsibility" extends="base.definition">
+        <put-attribute name="title" value="Leaveout Information" />
+        <put-attribute name="body" value="/WEB-INF/pages/academics/responsibility.jsp" />
+    </definition>
+
+    <definition name="teachers" extends="base.definition">
+        <put-attribute name="title" value="Leaveout Information" />
+        <put-attribute name="body" value="/WEB-INF/pages/academics/teacher.jsp" />
+    </definition>
+
+    <definition name="assigned" extends="base.definition">
+        <put-attribute name="title" value="Leaveout Information" />
+        <put-attribute name="body" value="/WEB-INF/pages/academics/assigned.jsp" />
+    </definition>
+
+    <definition name="teacherleaveouts" extends="base.definition">
+        <put-attribute name="title" value="Leaveout Information" />
+        <put-attribute name="body" value="/WEB-INF/pages/academics/teacherleaves.jsp" />
+    </definition>
+
+    <definition name="workers" extends="base.definition">
+        <put-attribute name="title" value="Leaveout Information" />
+        <put-attribute name="body" value="/WEB-INF/pages/academics/staff.jsp" />
+    </definition>
+
+    <definition name="staffregister" extends="base.definition">
+        <put-attribute name="title" value="Leaveout Information" />
+        <put-attribute name="body" value="/WEB-INF/pages/academics/staffregister.jsp" />
+    </definition>
+
+    <definition name="teacherregister" extends="base.definition">
+        <put-attribute name="title" value="Leaveout Information" />
+        <put-attribute name="body" value="/WEB-INF/pages/academics/teacherregister.jsp" />
+    </definition>
+
+    <definition name="classsubjects" extends="base.definition">
+        <put-attribute name="title" value="Leaveout Information" />
+        <put-attribute name="body" value="/WEB-INF/pages/academics/classsubjects.jsp" />
+    </definition>
+
+    <definition name="subjectgroups" extends="base.definition">
+        <put-attribute name="title" value="Leaveout Information" />
+        <put-attribute name="body" value="/WEB-INF/pages/academics/subjectgroups.jsp" />
+    </definition>
+
+    <definition name="termdates" extends="base.definition">
+        <put-attribute name="title" value="Leaveout Information" />
+        <put-attribute name="body" value="/WEB-INF/pages/academics/termdates.jsp" />
+    </definition>
+
+    <definition name="grading" extends="base.definition">
+        <put-attribute name="title" value="Leaveout Information" />
+        <put-attribute name="body" value="/WEB-INF/pages/academics/grading.jsp" />
+    </definition>
+
+    <definition name="clearance" extends="base.definition">
+        <put-attribute name="title" value="Leaveout Information" />
+        <put-attribute name="body" value="/WEB-INF/pages/academics/clearance.jsp" />
+    </definition>
+
+    <definition name="examtype" extends="base.definition">
+        <put-attribute name="title" value="Leaveout Information" />
+        <put-attribute name="body" value="/WEB-INF/pages/exams/examtype.jsp" />
+    </definition>
+
+    <definition name="examreg" extends="base.definition">
+        <put-attribute name="title" value="Leaveout Information" />
+        <put-attribute name="body" value="/WEB-INF/pages/exams/examreg.jsp" />
+    </definition>
+
+    <definition name="examrec" extends="base.definition">
+        <put-attribute name="title" value="Leaveout Information" />
+        <put-attribute name="body" value="/WEB-INF/pages/exams/examrecording.jsp" />
+    </definition>
+
+    <definition name="exammerge" extends="base.definition">
+        <put-attribute name="title" value="Leaveout Information" />
+        <put-attribute name="body" value="/WEB-INF/pages/exams/merge.jsp" />
+    </definition>
+</tiles-definitions>

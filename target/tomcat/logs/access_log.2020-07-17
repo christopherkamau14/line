@@ -1,0 +1,12 @@
+0:0:0:0:0:0:0:1 - - [17/Jul/2020:21:47:06 +0300] "GET /school/protected/reports/gendermeritlist?exam=555&forms= HTTP/1.1" 302 - http-bio-8084-exec-2 313
+0:0:0:0:0:0:0:1 - - [17/Jul/2020:21:47:07 +0300] "GET /school/login HTTP/1.1" 200 7013 http-bio-8084-exec-3 1169
+0:0:0:0:0:0:0:1 - - [17/Jul/2020:21:47:08 +0300] "GET /favicon.ico HTTP/1.1" 404 - http-bio-8084-exec-4 0
+0:0:0:0:0:0:0:1 - - [17/Jul/2020:21:47:13 +0300] "POST /school/login HTTP/1.1" 302 - http-bio-8084-exec-5 1852
+0:0:0:0:0:0:0:1 - - [17/Jul/2020:21:47:13 +0300] "GET /school/protected/home HTTP/1.1" 200 22606 http-bio-8084-exec-6 466
+0:0:0:0:0:0:0:1 - - [17/Jul/2020:21:47:23 +0300] "GET /school/protected/reports/process HTTP/1.1" 200 29774 http-bio-8084-exec-7 450
+0:0:0:0:0:0:0:1 - - [17/Jul/2020:21:47:23 +0300] "GET /school/js/modules/exams/process.js HTTP/1.1" 304 - http-bio-8084-exec-8 138
+0:0:0:0:0:0:0:1 - - [17/Jul/2020:21:47:28 +0300] "GET /school/protected/exams/pageTerm?term=&page=0&size=10&sort=termNumber&_=1595011643955 HTTP/1.1" 200 464 http-bio-8084-exec-9 1523
+0:0:0:0:0:0:0:1 - - [17/Jul/2020:21:47:31 +0300] "GET /school/protected/exams/pageRegister?term=&page=0&size=10&sort=examName&_=1595011643956 HTTP/1.1" 200 2916 http-bio-8084-exec-10 165
+0:0:0:0:0:0:0:1 - - [17/Jul/2020:21:47:35 +0300] "GET /school/protected/pageClass?term=&page=0&size=10&sort=classNo&_=1595011643957 HTTP/1.1" 200 600432 http-bio-8084-exec-10 303
+0:0:0:0:0:0:0:1 - - [17/Jul/2020:21:47:49 +0300] "GET /school/protected/reports/singleexamlist?exam=935&forms=496 HTTP/1.1" 200 14739 http-bio-8084-exec-3 10449
+0:0:0:0:0:0:0:1 - - [17/Jul/2020:21:48:19 +0300] "GET /school/protected/reports/singleexamlist?exam=935&forms=496 HTTP/1.1" 200 14739 http-bio-8084-exec-3 3621
