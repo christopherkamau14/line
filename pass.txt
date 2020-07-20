@@ -1,0 +1,15 @@
+
+First Create a database called school
+
+Install Tomcat9.exe in your machine if its not present
+
+Place the SchoolProj.war file in tomcat's webapp folder
+
+Then from services start Tomcat and give it a minute to run
+
+On your browser hit 'localhost:8080/SchoolProj/login'
+
+insert 'user' into field user_name in db and password insert '$2y$12$F2wXy0mcYmm8VJa75DEAT.PaSoo7zZZuoFDfwOW.24zRKzK92n6uu' for spring security hashing from
+the backend.
+
+To login use user as username and user as password spring with automatically unhash that weird hash string into user and you will login

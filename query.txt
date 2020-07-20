@@ -1,0 +1,2 @@
+select * from students_table FULL OUTER JOIN parents_table ON parents_table.parent_id=students_table.parent FULL OUTER JOIN religion_table ON religion_table.religion_id=students_table.student_religion FULL OUTER JOIN current_class ON 
+current_class.class_id=students_table.student_class INNER JOIN current_block ON current_block.block_id=current_class.class_block=students_table.student_class
