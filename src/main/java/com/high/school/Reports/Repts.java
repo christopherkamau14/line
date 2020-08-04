@@ -4,6 +4,7 @@ import com.high.school.Institution.model.AcademicOrg;
 import com.high.school.Institution.service.SchoolInterface;
 import com.high.school.Reports.service.ReportsInterface;
 import com.high.school.Reports.utils.*;
+import com.high.school.academics.model.Teachers;
 import com.high.school.examination.model.ExamRegister;
 import com.high.school.examination.model.MIssedExams;
 import com.high.school.examination.model.PositioningBean;
@@ -13,6 +14,8 @@ import com.high.school.exceptions.BadRequestException;
 import com.high.school.students.model.Forms;
 import com.high.school.students.model.Student;
 import com.high.school.students.service.StudentInterface;
+import com.high.school.timetabling.model.TeacherTableBean;
+import com.high.school.timetabling.model.TimetableBean;
 import net.sf.jasperreports.engine.*;
 import net.sf.jasperreports.engine.data.JRBeanCollectionDataSource;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -380,5 +383,42 @@ public class Repts {
         JasperReport jasperReport = JasperCompileManager.compileReport(path);
 
         return JasperFillManager.fillReport(jasperReport, parameters,beanColDataSource);
+    }
+
+    public JasperPrint classtt(Forms forms) throws IOException, JRException {
+        List<TimetableBean> dataList = examInterface.classtt(forms);
+
+        JRBeanCollectionDataSource beanColDataSource = new
+                JRBeanCollectionDataSource(dataList);
+        Map<String, Object> parameters = new HashMap<>();
+        AcademicOrg org=schoolInterface.getSchool();
+        InputStream in = new ByteArrayInputStream(org.getSchoolLogo());
+        BufferedImage image = ImageIO.read(in);
+        parameters.put("logo",image);
+        parameters.put("school",org.getSchoolName());
+        String path = resourceLoader.getResource("classpath:reports/classtimetable.jrxml").getURI().getPath();
+
+        JasperReport jasperReport = JasperCompileManager.compileReport(path);
+
+        return JasperFillManager.fillReport(jasperReport,parameters,beanColDataSource);
+
+    }
+
+    public JasperPrint teachertt(Teachers teachers) throws JRException, IOException {
+        List<TeacherTableBean> dataList = examInterface.teacherstt(teachers);
+
+        JRBeanCollectionDataSource beanColDataSource = new
+                JRBeanCollectionDataSource(dataList);
+        Map<String, Object> parameters = new HashMap<>();
+        AcademicOrg org=schoolInterface.getSchool();
+        InputStream in = new ByteArrayInputStream(org.getSchoolLogo());
+        BufferedImage image = ImageIO.read(in);
+        parameters.put("logo",image);
+        parameters.put("school",org.getSchoolName());
+        String path = resourceLoader.getResource("classpath:reports/teachertimetable.jrxml").getURI().getPath();
+
+        JasperReport jasperReport = JasperCompileManager.compileReport(path);
+
+        return JasperFillManager.fillReport(jasperReport,parameters,beanColDataSource);
     }
 }

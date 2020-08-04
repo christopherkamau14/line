@@ -19,6 +19,9 @@ public class TeacherSubjects {
     @Transient
     String subjectName;
 
+    @Transient
+    String teacherName;
+
     @ManyToOne
     @JoinColumn(name = "class_subject")
     private Forms forms;
@@ -77,6 +80,14 @@ public class TeacherSubjects {
 
     public void setSubjectName(String subjectName) {
         this.subjectName = subjectName;
+    }
+
+    public String getTeacherName() {
+        return teachers.getName();
+    }
+
+    public void setTeacherName(String teacherName) {
+        this.teacherName = teacherName;
     }
 }
 

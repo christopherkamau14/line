@@ -1,7 +1,6 @@
 package com.high.school.examination.model;
 
 import com.high.school.academics.model.GradingSystem;
-import com.high.school.academics.model.StudSubjects;
 import com.high.school.academics.model.TeacherSubjects;
 import com.high.school.academics.model.Teachers;
 import com.high.school.students.model.Forms;

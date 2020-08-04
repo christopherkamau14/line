@@ -28,8 +28,6 @@ public class ClassSubjects {
     @Column(name = "double_lessons")
     private String doubleLessons;
 
-
-
     @ManyToOne
     @JoinColumn(name = "class_subject")
     private Forms forms;

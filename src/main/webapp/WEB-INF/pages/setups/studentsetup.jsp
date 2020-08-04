@@ -13,6 +13,8 @@
                     </a></li>
                     <li><a href="<c:url value="/protected/academics/subjects"/>">Subject Setups
                     </a></li>
+                    <li><a href="<c:url value="/protected/academics/classsubjects"/>">Class Subject
+                    </a></li>
                     <li><a href="<c:url value="/protected/block"/>">Block Setups
                     </a></li>
                     <li><a href="<c:url value="/protected/class"/>">Class Setups

@@ -33,4 +33,6 @@ public interface TeacherSubjectsRepo extends JpaRepository<TeacherSubjects,Long>
     Page<TeacherSubjects> findByTeachersAndForms_ClassCode(Teachers teachers, Long classCode, Pageable pageable);
 
     Page<TeacherSubjects> findByTeachersAndForms_ClassCodeAndSubjects_NameContainingIgnoreCase(Teachers teachers, String term, Long classCode, Pageable pageable);
+
+    TeacherSubjects findByFormsAndSubjects(Forms className, StudSubjects subject);
 }

@@ -2,6 +2,7 @@ package com.high.school.Reports.service.impl;
 
 import com.high.school.Reports.service.ReportsInterface;
 import com.high.school.Reports.utils.*;
+import com.high.school.academics.model.Teachers;
 import com.high.school.academics.repo.GradingSysRepo;
 import com.high.school.academics.repo.SubjectsRepo;
 import com.high.school.academics.repo.TeacherRepo;
@@ -18,12 +19,21 @@ import com.high.school.students.repo.FormsRepo;
 import com.high.school.students.repo.StudentRepo;
 import com.high.school.students.repo.TermRepo;
 import com.high.school.students.repo.YearRepo;
+import com.high.school.timetabling.model.Allocations;
+import com.high.school.timetabling.model.Lessons;
+import com.high.school.timetabling.model.TeacherTableBean;
+import com.high.school.timetabling.model.TimetableBean;
+import com.high.school.timetabling.repo.AllocationRepo;
+import com.high.school.timetabling.repo.LessonRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
@@ -39,6 +49,12 @@ public class ReportsService implements ReportsInterface {
 
     @Autowired
     ExamRecordingRepo examRecordingRepo;
+
+    @Autowired
+    AllocationRepo allocationRepo;
+
+    @Autowired
+    LessonRepo lessonRepo;
 
     @Autowired
     MissedExamRepo missedExamRepo;
@@ -967,5 +983,736 @@ public class ReportsService implements ReportsInterface {
         reportFormBeans.add(myBean);
         return reportFormBeans;
 
+    }
+
+    @Override
+    public List<TimetableBean> classtt(Forms forms) {
+        List<Allocations> allocations=allocationRepo.findByForms(forms);
+        List<Lessons> gkc=lessonRepo.findAll();
+        List<TimetableBean> timetableBeans=new ArrayList<>();
+        DateFormat dateFormat = new SimpleDateFormat("hh:mm");
+        TimetableBean t=new TimetableBean();
+        for(Lessons l:gkc){
+            if(l.getLessonCode().equals("3")){
+                t.setBt1(dateFormat.format(l.getLessonStart()));
+            }
+            if(l.getLessonCode().equals("6")){
+                t.setBt2(dateFormat.format(l.getLessonStart()));
+            }
+            if(l.getLessonCode().equals("9")){
+                t.setBt3(dateFormat.format(l.getLessonStart()));
+            }
+            if(l.getLessonCode().equals("12")){
+                t.setBt4(dateFormat.format(l.getLessonStart()));
+            }
+            if(l.getLessonCode().equals("15")){
+                t.setBt5(dateFormat.format(l.getLessonStart()));
+            }
+        }
+        for(Allocations a:allocations){
+            if(a.getDays().getCode().equals("1")){
+                t.setD1(a.getDays().getName());
+                if(a.getLessons().getLessonCode().equals("1")){
+                    t.setL1m(a.getSubjects().getTimeTableName());
+                    t.setT1(dateFormat.format(a.getLessons().getLessonStart()));
+
+                }
+                if(a.getLessons().getLessonCode().equals("2")){
+                    t.setL2m(a.getSubjects().getTimeTableName());
+                    t.setT2(dateFormat.format(a.getLessons().getLessonStart()));
+                }
+                if(a.getLessons().getLessonCode().equals("4")){
+                    t.setL3m(a.getSubjects().getTimeTableName());
+                    t.setT3(dateFormat.format(a.getLessons().getLessonStart()));
+                }
+                if(a.getLessons().getLessonCode().equals("5")){
+                    t.setL4m(a.getSubjects().getTimeTableName());
+                    t.setT4(dateFormat.format(a.getLessons().getLessonStart()));
+                }
+                if(a.getLessons().getLessonCode().equals("7")){
+                    t.setL5m(a.getSubjects().getTimeTableName());
+                    t.setT5(dateFormat.format(a.getLessons().getLessonStart()));
+                }
+                if(a.getLessons().getLessonCode().equals("8")){
+                    t.setL6m(a.getSubjects().getTimeTableName());
+                    t.setT6(dateFormat.format(a.getLessons().getLessonStart()));
+                }
+                if(a.getLessons().getLessonCode().equals("10")){
+                    t.setL7m("PREPS");
+                    t.setT7(dateFormat.format(a.getLessons().getLessonStart()));
+                }
+                if(a.getLessons().getLessonCode().equals("11")){
+                    t.setL8m(a.getSubjects().getTimeTableName());
+                    t.setT8(dateFormat.format(a.getLessons().getLessonStart()));
+                }
+                if(a.getLessons().getLessonCode().equals("13")){
+                    t.setL9m(a.getSubjects().getTimeTableName());
+                    t.setT9(dateFormat.format(a.getLessons().getLessonStart()));
+                }
+                if(a.getLessons().getLessonCode().equals("14")){
+                    t.setL10m(a.getSubjects().getTimeTableName());
+                    t.setT10(dateFormat.format(a.getLessons().getLessonStart()));
+                }
+            }
+            if(a.getDays().getCode().equals("2")){
+                t.setD2(a.getDays().getName());
+                if(a.getLessons().getLessonCode().equals("1")){
+                    t.setL1t(a.getSubjects().getTimeTableName());
+                    if(t.getT1()==null) {
+                        t.setT1(dateFormat.format(a.getLessons().getLessonStart()));
+                    }
+                }
+                if(a.getLessons().getLessonCode().equals("2")){
+                    t.setL2t(a.getSubjects().getTimeTableName());
+                    if(t.getT2()==null) {
+                        t.setT2(dateFormat.format(a.getLessons().getLessonStart()));
+                    }
+                }
+                if(a.getLessons().getLessonCode().equals("4")){
+                    t.setL3t(a.getSubjects().getTimeTableName());
+                    if(t.getT3()==null) {
+                        t.setT3(dateFormat.format(a.getLessons().getLessonStart()));
+                    }
+                }
+                if(a.getLessons().getLessonCode().equals("5")){
+                    t.setL4t(a.getSubjects().getTimeTableName());
+                    if(t.getT4()==null) {
+                        t.setT4(dateFormat.format(a.getLessons().getLessonStart()));
+                    }
+                }
+                if(a.getLessons().getLessonCode().equals("7")){
+                    t.setL5t(a.getSubjects().getTimeTableName());
+                    if(t.getT5()==null) {
+                        t.setT5(dateFormat.format(a.getLessons().getLessonStart()));
+                    }
+                }
+                if(a.getLessons().getLessonCode().equals("8")){
+                    t.setL6t(a.getSubjects().getTimeTableName());
+                    if(t.getT6()==null) {
+                        t.setT6(dateFormat.format(a.getLessons().getLessonStart()));
+                    }
+                }
+                if(a.getLessons().getLessonCode().equals("10")){
+                    t.setL7t("PREPS");
+                    if(t.getT7()==null) {
+                        t.setT7(dateFormat.format(a.getLessons().getLessonStart()));
+                    }
+                }
+                if(a.getLessons().getLessonCode().equals("11")){
+                    t.setL8t(a.getSubjects().getTimeTableName());
+                    if(t.getT8()==null) {
+                        t.setT8(dateFormat.format(a.getLessons().getLessonStart()));
+                    }
+                }
+                if(a.getLessons().getLessonCode().equals("13")){
+                    t.setL9t(a.getSubjects().getTimeTableName());
+                    if(t.getT9()==null) {
+                        t.setT9(dateFormat.format(a.getLessons().getLessonStart()));
+                    }
+                }
+                if(a.getLessons().getLessonCode().equals("14")){
+                    t.setL10t(a.getSubjects().getTimeTableName());
+                    if(t.getT10()==null) {
+                        t.setT10(dateFormat.format(a.getLessons().getLessonStart()));
+                    }
+                }
+            }
+            if(a.getDays().getCode().equals("3")){
+                t.setD3(a.getDays().getName());
+                if(a.getLessons().getLessonCode().equals("1")){
+                    t.setL1w(a.getSubjects().getTimeTableName());
+                    if(t.getT1()==null) {
+                        t.setT1(dateFormat.format(a.getLessons().getLessonStart()));
+                    }
+                }
+                if(a.getLessons().getLessonCode().equals("2")){
+                    t.setL2w(a.getSubjects().getTimeTableName());
+                    if(t.getT2()==null) {
+                        t.setT2(dateFormat.format(a.getLessons().getLessonStart()));
+                    }
+                }
+                if(a.getLessons().getLessonCode().equals("4")){
+                    t.setL3w(a.getSubjects().getTimeTableName());
+                    if(t.getT3()==null) {
+                        t.setT3(dateFormat.format(a.getLessons().getLessonStart()));
+                    }
+                }
+                if(a.getLessons().getLessonCode().equals("5")){
+                    t.setL4w(a.getSubjects().getTimeTableName());
+                    if(t.getT4()==null) {
+                        t.setT4(dateFormat.format(a.getLessons().getLessonStart()));
+                    }
+                }
+                if(a.getLessons().getLessonCode().equals("7")){
+                    t.setL5w(a.getSubjects().getTimeTableName());
+                    if(t.getT5()==null) {
+                        t.setT5(dateFormat.format(a.getLessons().getLessonStart()));
+                    }
+                }
+                if(a.getLessons().getLessonCode().equals("8")){
+                    t.setL6w(a.getSubjects().getTimeTableName());
+                    if(t.getT6()==null) {
+                        t.setT6(dateFormat.format(a.getLessons().getLessonStart()));
+                    }
+                }
+                if(a.getLessons().getLessonCode().equals("10")){
+                    t.setL7w("PREPS");
+                    if(t.getT7()==null) {
+                        t.setT7(dateFormat.format(a.getLessons().getLessonStart()));
+                    }
+                }
+                if(a.getLessons().getLessonCode().equals("11")){
+                    t.setL8w(a.getSubjects().getTimeTableName());
+                    if(t.getT8()==null) {
+                        t.setT8(dateFormat.format(a.getLessons().getLessonStart()));
+                    }
+                }
+                if(a.getLessons().getLessonCode().equals("13")){
+                    t.setL9w(a.getSubjects().getTimeTableName());
+                    if(t.getT9()==null) {
+                        t.setT9(dateFormat.format(a.getLessons().getLessonStart()));
+                    }
+                }
+                if(a.getLessons().getLessonCode().equals("14")){
+                    t.setL10w(a.getSubjects().getTimeTableName());
+                    if(t.getT10()==null) {
+                        t.setT10(dateFormat.format(a.getLessons().getLessonStart()));
+                    }
+                }
+            }
+            if(a.getDays().getCode().equals("4")){
+                t.setD4(a.getDays().getName());
+                if(a.getLessons().getLessonCode().equals("1")){
+                    t.setL1th(a.getSubjects().getTimeTableName());
+                    if(t.getT1()==null) {
+                        t.setT1(dateFormat.format(a.getLessons().getLessonStart()));
+                    }
+                }
+                if(a.getLessons().getLessonCode().equals("2")){
+                    t.setL2th(a.getSubjects().getTimeTableName());
+                    if(t.getT2()==null) {
+                        t.setT2(dateFormat.format(a.getLessons().getLessonStart()));
+                    }
+                }
+                if(a.getLessons().getLessonCode().equals("4")){
+                    t.setL3th(a.getSubjects().getTimeTableName());
+                    if(t.getT3()==null) {
+                        t.setT3(dateFormat.format(a.getLessons().getLessonStart()));
+                    }
+                }
+                if(a.getLessons().getLessonCode().equals("5")){
+                    t.setL4th(a.getSubjects().getTimeTableName());
+                    if(t.getT4()==null) {
+                        t.setT4(dateFormat.format(a.getLessons().getLessonStart()));
+                    }
+                }
+                if(a.getLessons().getLessonCode().equals("7")){
+                    t.setL5th(a.getSubjects().getTimeTableName());
+                    if(t.getT5()==null) {
+                        t.setT5(dateFormat.format(a.getLessons().getLessonStart()));
+                    }
+                }
+                if(a.getLessons().getLessonCode().equals("8")){
+                    t.setL6th(a.getSubjects().getTimeTableName());
+                    if(t.getT6()==null) {
+                        t.setT6(dateFormat.format(a.getLessons().getLessonStart()));
+                    }
+                }
+                if(a.getLessons().getLessonCode().equals("10")){
+                    t.setL7th("PREPS");
+                    if(t.getT7()==null) {
+                        t.setT7(dateFormat.format(a.getLessons().getLessonStart()));
+                    }
+                }
+                if(a.getLessons().getLessonCode().equals("11")){
+                    t.setL8th(a.getSubjects().getTimeTableName());
+                    if(t.getT8()==null) {
+                        t.setT8(dateFormat.format(a.getLessons().getLessonStart()));
+                    }
+                }
+                if(a.getLessons().getLessonCode().equals("13")){
+                    t.setL9th(a.getSubjects().getTimeTableName());
+                    if(t.getT9()==null) {
+                        t.setT9(dateFormat.format(a.getLessons().getLessonStart()));
+                    }
+                }
+                if(a.getLessons().getLessonCode().equals("14")){
+                    t.setL10th(a.getSubjects().getTimeTableName());
+                    if(t.getT10()==null) {
+                        t.setT10(dateFormat.format(a.getLessons().getLessonStart()));
+                    }
+                }
+            }
+            if(a.getDays().getCode().equals("5")){
+                t.setD5(a.getDays().getName());
+                if(a.getLessons().getLessonCode().equals("1")){
+                    t.setL1f(a.getSubjects().getTimeTableName());
+                    if(t.getT1()==null) {
+                        t.setT1(dateFormat.format(a.getLessons().getLessonStart()));
+                    }
+                }
+                if(a.getLessons().getLessonCode().equals("2")){
+                    t.setL2f(a.getSubjects().getTimeTableName());
+                    if(t.getT2()==null) {
+                        t.setT2(dateFormat.format(a.getLessons().getLessonStart()));
+                    }
+                }
+                if(a.getLessons().getLessonCode().equals("4")){
+                    t.setL3f(a.getSubjects().getTimeTableName());
+                    if(t.getT3()==null) {
+                        t.setT3(dateFormat.format(a.getLessons().getLessonStart()));
+                    }
+                }
+                if(a.getLessons().getLessonCode().equals("5")){
+                    t.setL4f(a.getSubjects().getTimeTableName());
+                    if(t.getT4()==null) {
+                        t.setT4(dateFormat.format(a.getLessons().getLessonStart()));
+                    }
+                }
+                if(a.getLessons().getLessonCode().equals("7")){
+                    t.setL5f(a.getSubjects().getTimeTableName());
+                    if(t.getT5()==null) {
+                        t.setT5(dateFormat.format(a.getLessons().getLessonStart()));
+                    }
+                }
+                if(a.getLessons().getLessonCode().equals("8")){
+                    t.setL6f(a.getSubjects().getTimeTableName());
+                    if(t.getT6()==null) {
+                        t.setT6(dateFormat.format(a.getLessons().getLessonStart()));
+                    }
+                }
+                if(a.getLessons().getLessonCode().equals("10")){
+                    t.setL7f("PREPS");
+                    if(t.getT7()==null) {
+                        t.setT7(dateFormat.format(a.getLessons().getLessonStart()));
+                    }
+                }
+                if(a.getLessons().getLessonCode().equals("11")){
+                    t.setL8f(a.getSubjects().getTimeTableName());
+                    if(t.getT8()==null) {
+                        t.setT8(dateFormat.format(a.getLessons().getLessonStart()));
+                    }
+                }
+                if(a.getLessons().getLessonCode().equals("13")){
+                    t.setL9f(a.getSubjects().getTimeTableName());
+                    if(t.getT9()==null) {
+                        t.setT9(dateFormat.format(a.getLessons().getLessonStart()));
+                    }
+                }
+                if(a.getLessons().getLessonCode().equals("14")){
+                    t.setL10f(a.getSubjects().getTimeTableName());
+                    if(t.getT10()==null) {
+                        t.setT10(dateFormat.format(a.getLessons().getLessonStart()));
+                    }
+                }
+            }
+
+        }
+        timetableBeans.add(t);
+        return timetableBeans;
+    }
+
+    @Override
+    public List<TeacherTableBean> teacherstt(Teachers teachers) {
+        List<Allocations> allocations=allocationRepo.findByTeachers(teachers);
+        List<Lessons> gkc=lessonRepo.findAll();
+        List<TeacherTableBean> timetableBeans=new ArrayList<>();
+        DateFormat dateFormat = new SimpleDateFormat("hh:mm");
+        TeacherTableBean t=new TeacherTableBean();
+        for(Lessons l:gkc){
+            if(l.getLessonCode().equals("3")){
+                t.setBt1(dateFormat.format(l.getLessonStart()));
+            }
+            if(l.getLessonCode().equals("6")){
+                t.setBt2(dateFormat.format(l.getLessonStart()));
+            }
+            if(l.getLessonCode().equals("9")){
+                t.setBt3(dateFormat.format(l.getLessonStart()));
+            }
+            if(l.getLessonCode().equals("12")){
+                t.setBt4(dateFormat.format(l.getLessonStart()));
+            }
+            if(l.getLessonCode().equals("15")){
+                t.setBt5(dateFormat.format(l.getLessonStart()));
+            }
+        }
+        for(Allocations a:allocations){
+            if(a.getDays().getCode().equals("1")){
+                t.setD1(a.getDays().getName());
+                if(a.getLessons().getLessonCode().equals("1")){
+                    t.setL1m(a.getSubjects().getTimeTableName());
+                    t.setT1(dateFormat.format(a.getLessons().getLessonStart()));
+                     t.setC1m(a.getClassName());
+                }
+                if(a.getLessons().getLessonCode().equals("2")){
+                    t.setL2m(a.getSubjects().getTimeTableName());
+                    t.setT2(dateFormat.format(a.getLessons().getLessonStart()));
+                    t.setC2m(a.getClassName());
+                }
+                if(a.getLessons().getLessonCode().equals("4")){
+                    t.setL3m(a.getSubjects().getTimeTableName());
+                    t.setT3(dateFormat.format(a.getLessons().getLessonStart()));
+                    t.setC3m(a.getClassName());
+                }
+                if(a.getLessons().getLessonCode().equals("5")){
+                    t.setL4m(a.getSubjects().getTimeTableName());
+                    t.setT4(dateFormat.format(a.getLessons().getLessonStart()));
+                    t.setC4m(a.getClassName());
+                }
+                if(a.getLessons().getLessonCode().equals("7")){
+                    t.setL5m(a.getSubjects().getTimeTableName());
+                    t.setT5(dateFormat.format(a.getLessons().getLessonStart()));
+                    t.setC5m(a.getClassName());
+                }
+                if(a.getLessons().getLessonCode().equals("8")){
+                    t.setL6m(a.getSubjects().getTimeTableName());
+                    t.setT6(dateFormat.format(a.getLessons().getLessonStart()));
+                    t.setC6m(a.getClassName());
+                }
+                if(a.getLessons().getLessonCode().equals("10")){
+                    t.setL7m("PREPS");
+                    t.setT7(dateFormat.format(a.getLessons().getLessonStart()));
+                    //t.setC7m(a.getClassName());
+                }
+                if(a.getLessons().getLessonCode().equals("11")){
+                    t.setL8m(a.getSubjects().getTimeTableName());
+                    t.setT8(dateFormat.format(a.getLessons().getLessonStart()));
+                    t.setC8m(a.getClassName());
+                }
+                if(a.getLessons().getLessonCode().equals("13")){
+                    t.setL9m(a.getSubjects().getTimeTableName());
+                    t.setT9(dateFormat.format(a.getLessons().getLessonStart()));
+                    t.setC9m(a.getClassName());
+                }
+                if(a.getLessons().getLessonCode().equals("14")){
+                    t.setL10m(a.getSubjects().getTimeTableName());
+                    t.setT10(dateFormat.format(a.getLessons().getLessonStart()));
+                    t.setC10m(a.getClassName());
+                }
+            }
+            if(a.getDays().getCode().equals("2")){
+                t.setD2(a.getDays().getName());
+                if(a.getLessons().getLessonCode().equals("1")){
+                    t.setL1t(a.getSubjects().getTimeTableName());
+                    if(t.getT1()==null) {
+                        t.setT1(dateFormat.format(a.getLessons().getLessonStart()));
+                    }
+                    t.setC1t(a.getClassName());
+                }
+                if(a.getLessons().getLessonCode().equals("2")){
+                    t.setL2t(a.getSubjects().getTimeTableName());
+                    if(t.getT2()==null) {
+                        t.setT2(dateFormat.format(a.getLessons().getLessonStart()));
+                    }
+                    t.setC2t(a.getClassName());
+
+                }
+                if(a.getLessons().getLessonCode().equals("4")){
+                    t.setL3t(a.getSubjects().getTimeTableName());
+                    if(t.getT3()==null) {
+                        t.setT3(dateFormat.format(a.getLessons().getLessonStart()));
+                    }
+                    t.setC3t(a.getClassName());
+
+                }
+                if(a.getLessons().getLessonCode().equals("5")){
+                    t.setL4t(a.getSubjects().getTimeTableName());
+                    if(t.getT4()==null) {
+                        t.setT4(dateFormat.format(a.getLessons().getLessonStart()));
+                    }
+                    t.setC4t(a.getClassName());
+
+                }
+                if(a.getLessons().getLessonCode().equals("7")){
+                    t.setL5t(a.getSubjects().getTimeTableName());
+                    if(t.getT5()==null) {
+                        t.setT5(dateFormat.format(a.getLessons().getLessonStart()));
+                    }
+                    t.setC5t(a.getClassName());
+
+                }
+                if(a.getLessons().getLessonCode().equals("8")){
+                    t.setL6t(a.getSubjects().getTimeTableName());
+                    if(t.getT6()==null) {
+                        t.setT6(dateFormat.format(a.getLessons().getLessonStart()));
+                    }
+                    t.setC6t(a.getClassName());
+
+                }
+                if(a.getLessons().getLessonCode().equals("10")){
+                    t.setL7t("PREPS");
+                    if(t.getT7()==null) {
+                        t.setT7(dateFormat.format(a.getLessons().getLessonStart()));
+                    }
+                   // t.setC7t(a.getClassName());
+
+                }
+                if(a.getLessons().getLessonCode().equals("11")){
+                    t.setL8t(a.getSubjects().getTimeTableName());
+                    if(t.getT8()==null) {
+                        t.setT8(dateFormat.format(a.getLessons().getLessonStart()));
+                    }
+                    t.setC8t(a.getClassName());
+
+                }
+                if(a.getLessons().getLessonCode().equals("13")){
+                    t.setL9t(a.getSubjects().getTimeTableName());
+                    if(t.getT9()==null) {
+                        t.setT9(dateFormat.format(a.getLessons().getLessonStart()));
+                    }
+                    t.setC9t(a.getClassName());
+
+                }
+                if(a.getLessons().getLessonCode().equals("14")){
+                    t.setL10t(a.getSubjects().getTimeTableName());
+                    if(t.getT10()==null) {
+                        t.setT10(dateFormat.format(a.getLessons().getLessonStart()));
+                    }
+                    t.setC10t(a.getClassName());
+
+                }
+            }
+            if(a.getDays().getCode().equals("3")){
+                t.setD3(a.getDays().getName());
+                if(a.getLessons().getLessonCode().equals("1")){
+                    t.setL1w(a.getSubjects().getTimeTableName());
+                    if(t.getT1()==null) {
+                        t.setT1(dateFormat.format(a.getLessons().getLessonStart()));
+                    }
+                    t.setC1w(a.getClassName());
+                }
+                if(a.getLessons().getLessonCode().equals("2")){
+                    t.setL2w(a.getSubjects().getTimeTableName());
+                    if(t.getT2()==null) {
+                        t.setT2(dateFormat.format(a.getLessons().getLessonStart()));
+                    }
+                    t.setC2w(a.getClassName());
+                }
+                if(a.getLessons().getLessonCode().equals("4")){
+                    t.setL3w(a.getSubjects().getTimeTableName());
+                    if(t.getT3()==null) {
+                        t.setT3(dateFormat.format(a.getLessons().getLessonStart()));
+                    }
+                    t.setC3w(a.getClassName());
+                }
+                if(a.getLessons().getLessonCode().equals("5")){
+                    t.setL4w(a.getSubjects().getTimeTableName());
+                    if(t.getT4()==null) {
+                        t.setT4(dateFormat.format(a.getLessons().getLessonStart()));
+                    }
+                    t.setC4w(a.getClassName());
+                }
+                if(a.getLessons().getLessonCode().equals("7")){
+                    t.setL5w(a.getSubjects().getTimeTableName());
+                    if(t.getT5()==null) {
+                        t.setT5(dateFormat.format(a.getLessons().getLessonStart()));
+                    }
+                    t.setC5w(a.getClassName());
+                }
+                if(a.getLessons().getLessonCode().equals("8")){
+                    t.setL6w(a.getSubjects().getTimeTableName());
+                    if(t.getT6()==null) {
+                        t.setT6(dateFormat.format(a.getLessons().getLessonStart()));
+                    }
+                    t.setC6w(a.getClassName());
+                }
+                if(a.getLessons().getLessonCode().equals("10")){
+                    t.setL7w("PREPS");
+                    if(t.getT7()==null) {
+                        t.setT7(dateFormat.format(a.getLessons().getLessonStart()));
+                    }
+                   // t.setC7w(a.getClassName());
+                }
+                if(a.getLessons().getLessonCode().equals("11")){
+                    t.setL8w(a.getSubjects().getTimeTableName());
+                    if(t.getT8()==null) {
+                        t.setT8(dateFormat.format(a.getLessons().getLessonStart()));
+                    }
+                    t.setC8w(a.getClassName());
+                }
+                if(a.getLessons().getLessonCode().equals("13")){
+                    t.setL9w(a.getSubjects().getTimeTableName());
+                    if(t.getT9()==null) {
+                        t.setT9(dateFormat.format(a.getLessons().getLessonStart()));
+                    }
+                    t.setC9w(a.getClassName());
+                }
+                if(a.getLessons().getLessonCode().equals("14")){
+                    t.setL10w(a.getSubjects().getTimeTableName());
+                    if(t.getT10()==null) {
+                        t.setT10(dateFormat.format(a.getLessons().getLessonStart()));
+                    }
+                    t.setC10w(a.getClassName());
+                }
+            }
+            if(a.getDays().getCode().equals("4")){
+                t.setD4(a.getDays().getName());
+                if(a.getLessons().getLessonCode().equals("1")){
+                    t.setL1th(a.getSubjects().getTimeTableName());
+                    if(t.getT1()==null) {
+                        t.setT1(dateFormat.format(a.getLessons().getLessonStart()));
+                    }
+                    t.setC1th(a.getClassName());
+                }
+                if(a.getLessons().getLessonCode().equals("2")){
+                    t.setL2th(a.getSubjects().getTimeTableName());
+                    if(t.getT2()==null) {
+                        t.setT2(dateFormat.format(a.getLessons().getLessonStart()));
+                    }
+                    t.setC2th(a.getClassName());
+
+                }
+                if(a.getLessons().getLessonCode().equals("4")){
+                    t.setL3th(a.getSubjects().getTimeTableName());
+                    if(t.getT3()==null) {
+                        t.setT3(dateFormat.format(a.getLessons().getLessonStart()));
+                    }
+                    t.setC3th(a.getClassName());
+
+                }
+                if(a.getLessons().getLessonCode().equals("5")){
+                    t.setL4th(a.getSubjects().getTimeTableName());
+                    if(t.getT4()==null) {
+                        t.setT4(dateFormat.format(a.getLessons().getLessonStart()));
+                    }
+                    t.setC4th(a.getClassName());
+
+                }
+                if(a.getLessons().getLessonCode().equals("7")){
+                    t.setL5th(a.getSubjects().getTimeTableName());
+                    if(t.getT5()==null) {
+                        t.setT5(dateFormat.format(a.getLessons().getLessonStart()));
+                    }
+                    t.setC5th(a.getClassName());
+
+                }
+                if(a.getLessons().getLessonCode().equals("8")){
+                    t.setL6th(a.getSubjects().getTimeTableName());
+                    if(t.getT6()==null) {
+                        t.setT6(dateFormat.format(a.getLessons().getLessonStart()));
+                    }
+                    t.setC6th(a.getClassName());
+
+                }
+                if(a.getLessons().getLessonCode().equals("10")){
+                    t.setL7th("PREPS");
+                    if(t.getT7()==null) {
+                        t.setT7(dateFormat.format(a.getLessons().getLessonStart()));
+                    }
+                    //t.setC7th(a.getClassName());
+
+                }
+                if(a.getLessons().getLessonCode().equals("11")){
+                    t.setL8th(a.getSubjects().getTimeTableName());
+                    if(t.getT8()==null) {
+                        t.setT8(dateFormat.format(a.getLessons().getLessonStart()));
+                    }
+                    t.setC8th(a.getClassName());
+
+                }
+                if(a.getLessons().getLessonCode().equals("13")){
+                    t.setL9th(a.getSubjects().getTimeTableName());
+                    if(t.getT9()==null) {
+                        t.setT9(dateFormat.format(a.getLessons().getLessonStart()));
+                    }
+                    t.setC9th(a.getClassName());
+
+                }
+                if(a.getLessons().getLessonCode().equals("14")){
+                    t.setL10th(a.getSubjects().getTimeTableName());
+                    if(t.getT10()==null) {
+                        t.setT10(dateFormat.format(a.getLessons().getLessonStart()));
+                    }
+                    t.setC10th(a.getClassName());
+
+                }
+            }
+            if(a.getDays().getCode().equals("5")){
+                t.setD5(a.getDays().getName());
+                if(a.getLessons().getLessonCode().equals("1")){
+                    t.setL1f(a.getSubjects().getTimeTableName());
+                    if(t.getT1()==null) {
+                        t.setT1(dateFormat.format(a.getLessons().getLessonStart()));
+                    }
+                    t.setC1f(a.getClassName());
+
+                }
+                if(a.getLessons().getLessonCode().equals("2")){
+                    t.setL2f(a.getSubjects().getTimeTableName());
+                    if(t.getT2()==null) {
+                        t.setT2(dateFormat.format(a.getLessons().getLessonStart()));
+                    }
+                    t.setC2f(a.getClassName());
+
+                }
+                if(a.getLessons().getLessonCode().equals("4")){
+                    t.setL3f(a.getSubjects().getTimeTableName());
+                    if(t.getT3()==null) {
+                        t.setT3(dateFormat.format(a.getLessons().getLessonStart()));
+                    }
+                    t.setC3f(a.getClassName());
+
+                }
+                if(a.getLessons().getLessonCode().equals("5")){
+                    t.setL4f(a.getSubjects().getTimeTableName());
+                    if(t.getT4()==null) {
+                        t.setT4(dateFormat.format(a.getLessons().getLessonStart()));
+                    }
+                    t.setC4f(a.getClassName());
+
+                }
+                if(a.getLessons().getLessonCode().equals("7")){
+                    t.setL5f(a.getSubjects().getTimeTableName());
+                    if(t.getT5()==null) {
+                        t.setT5(dateFormat.format(a.getLessons().getLessonStart()));
+                    }
+                    t.setC5f(a.getClassName());
+
+                }
+                if(a.getLessons().getLessonCode().equals("8")){
+                    t.setL6f(a.getSubjects().getTimeTableName());
+                    if(t.getT6()==null) {
+                        t.setT6(dateFormat.format(a.getLessons().getLessonStart()));
+                    }
+                    t.setC6f(a.getClassName());
+
+                }
+                if(a.getLessons().getLessonCode().equals("10")){
+                    t.setL7f("PREPS");
+                    if(t.getT7()==null) {
+                        t.setT7(dateFormat.format(a.getLessons().getLessonStart()));
+                    }
+                    //t.setC7f(a.getClassName());
+
+                }
+                if(a.getLessons().getLessonCode().equals("11")){
+                    t.setL8f(a.getSubjects().getTimeTableName());
+                    if(t.getT8()==null) {
+                        t.setT8(dateFormat.format(a.getLessons().getLessonStart()));
+                    }
+                    t.setC8f(a.getClassName());
+
+                }
+                if(a.getLessons().getLessonCode().equals("13")){
+                    t.setL9f(a.getSubjects().getTimeTableName());
+                    if(t.getT9()==null) {
+                        t.setT9(dateFormat.format(a.getLessons().getLessonStart()));
+                    }
+                    t.setC9f(a.getClassName());
+
+                }
+                if(a.getLessons().getLessonCode().equals("14")){
+                    t.setL10f(a.getSubjects().getTimeTableName());
+                    if(t.getT10()==null) {
+                        t.setT10(dateFormat.format(a.getLessons().getLessonStart()));
+                    }
+                    t.setC10f(a.getClassName());
+
+                }
+            }
+
+        }
+        timetableBeans.add(t);
+        return timetableBeans;
     }
 }

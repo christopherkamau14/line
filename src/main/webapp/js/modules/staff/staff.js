@@ -1,3 +1,4 @@
+// jshint ignore: start
 $(document).ready(function () {
     clearAllPendingSubjects();
 selectClass();
@@ -23,7 +24,7 @@ searchTeFc();
     $('#muller1').hide();
     $(".datepicker-input").each(function() {
         $(this).datetimepicker({
-            format: 'DD/MM/YYYY'
+            format: 'DD/MM/YYYY'//hh:mm:ss
         });
 
     });

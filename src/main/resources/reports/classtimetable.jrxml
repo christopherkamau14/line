@@ -1,0 +1,757 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.12.2.final using JasperReports Library version 6.12.2-75c5e90a222ab406e416cbf590a5397028a52de3  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Blank_A4" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="fe54e253-0ad2-49c1-b60e-187ae2b4eefa">
+    <queryString>
+        <![CDATA[]]>
+    </queryString>
+
+    <field name="d1" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.label" value="allocation_id"/>
+    </field>
+    <field name="d2" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.label" value="show_tt"/>
+    </field>
+    <field name="d3" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.label" value="tt_days"/>
+    </field>
+    <field name="d4" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.label" value="tt_class"/>
+    </field>
+    <field name="d5" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.label" value="tt_lessons"/>
+    </field>
+    <field name="d6" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.label" value="tt_class"/>
+    </field>
+    <field name="d7" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.label" value="tt_lessons"/>
+    </field>
+
+    <field name="t1" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.label" value="allocation_id"/>
+    </field>
+    <field name="t2" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.label" value="show_tt"/>
+    </field>
+    <field name="t3" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.label" value="tt_days"/>
+    </field>
+    <field name="t4" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.label" value="tt_class"/>
+    </field>
+    <field name="t5" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.label" value="tt_lessons"/>
+    </field>
+    <field name="t6" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.label" value="tt_teachersubjects"/>
+    </field>
+    <field name="t7" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.label" value="tt_term"/>
+    </field>
+    <field name="t8" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.label" value="class_name"/>
+    </field>
+    <field name="t9" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.label" value="day_name"/>
+    </field>
+    <field name="t10" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.label" value="tt_stroked"/>
+    </field>
+    <field name="bt1" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.label" value="tt_teachersubjects"/>
+    </field>
+    <field name="bt2" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.label" value="tt_term"/>
+    </field>
+    <field name="bt3" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.label" value="class_name"/>
+    </field>
+    <field name="bt4" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.label" value="day_name"/>
+    </field>
+    <field name="bt5" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.label" value="tt_stroked"/>
+    </field>
+    <field name="l1m" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.label" value="subject_name"/>
+    </field>
+    <field name="l2m" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.label" value="teacher_name"/>
+    </field>
+    <field name="l3m" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.label" value="tt_user"/>
+    </field>
+    <field name="l4m" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.label" value="tt_subjects"/>
+    </field>
+    <field name="l5m" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.label" value="tt_teachers"/>
+    </field>
+    <field name="l6m" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.label" value="teacher_id"/>
+    </field>
+    <field name="l7m" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.label" value="address"/>
+    </field>
+    <field name="l8m" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.label" value="email"/>
+    </field>
+    <field name="l9m" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.label" value="end_dates"/>
+    </field>
+    <field name="l10m" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.label" value="gender"/>
+    </field>
+    <field name="l1t" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.label" value="subject_name"/>
+    </field>
+    <field name="l2t" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.label" value="teacher_name"/>
+    </field>
+    <field name="l3t" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.label" value="tt_user"/>
+    </field>
+    <field name="l4t" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.label" value="tt_subjects"/>
+    </field>
+    <field name="l5t" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.label" value="tt_teachers"/>
+    </field>
+    <field name="l6t" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.label" value="teacher_id"/>
+    </field>
+    <field name="l7t" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.label" value="address"/>
+    </field>
+    <field name="l8t" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.label" value="email"/>
+    </field>
+    <field name="l9t" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.label" value="end_dates"/>
+    </field>
+    <field name="l10t" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.label" value="gender"/>
+    </field>
+    <field name="l1w" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.label" value="subject_name"/>
+    </field>
+    <field name="l2w" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.label" value="teacher_name"/>
+    </field>
+    <field name="l3w" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.label" value="tt_user"/>
+    </field>
+    <field name="l4w" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.label" value="tt_subjects"/>
+    </field>
+    <field name="l5w" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.label" value="tt_teachers"/>
+    </field>
+    <field name="l6w" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.label" value="teacher_id"/>
+    </field>
+    <field name="l7w" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.label" value="address"/>
+    </field>
+    <field name="l8w" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.label" value="email"/>
+    </field>
+    <field name="l9w" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.label" value="end_dates"/>
+    </field>
+    <field name="l10w" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.label" value="gender"/>
+    </field>
+    <field name="l1th" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.label" value="subject_name"/>
+    </field>
+    <field name="l2th" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.label" value="teacher_name"/>
+    </field>
+    <field name="l3th" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.label" value="tt_user"/>
+    </field>
+    <field name="l4th" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.label" value="tt_subjects"/>
+    </field>
+    <field name="l5th" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.label" value="tt_teachers"/>
+    </field>
+    <field name="l6th" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.label" value="teacher_id"/>
+    </field>
+    <field name="l7th" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.label" value="address"/>
+    </field>
+    <field name="l8th" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.label" value="email"/>
+    </field>
+    <field name="l9th" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.label" value="end_dates"/>
+    </field>
+    <field name="l10th" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.label" value="gender"/>
+    </field>
+    <field name="l1f" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.label" value="subject_name"/>
+    </field>
+    <field name="l2f" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.label" value="teacher_name"/>
+    </field>
+    <field name="l3f" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.label" value="tt_user"/>
+    </field>
+    <field name="l4f" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.label" value="tt_subjects"/>
+    </field>
+    <field name="l5f" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.label" value="tt_teachers"/>
+    </field>
+    <field name="l6f" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.label" value="teacher_id"/>
+    </field>
+    <field name="l7f" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.label" value="address"/>
+    </field>
+    <field name="l8f" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.label" value="email"/>
+    </field>
+    <field name="l9f" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.label" value="end_dates"/>
+    </field>
+    <field name="l10f" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.label" value="gender"/>
+    </field>
+    <field name="className" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.label" value="id_number"/>
+    </field>
+    <field name="term" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.label" value="intials"/>
+    </field>
+
+    <background>
+        <band splitType="Stretch"/>
+    </background>
+    <columnHeader>
+        <band height="40" splitType="Stretch">
+            <rectangle>
+                <reportElement x="0" y="0" width="80" height="40" uuid="025a2332-7575-436f-891b-d93a360fc458"/>
+            </rectangle>
+            <rectangle>
+                <reportElement x="80" y="0" width="90" height="40" uuid="a59b2797-e103-4724-9488-beb6f62cb8d5"/>
+            </rectangle>
+            <rectangle>
+                <reportElement x="170" y="0" width="100" height="40" uuid="bd3d840d-0788-44d4-99ec-132b31643ccb"/>
+            </rectangle>
+            <rectangle>
+                <reportElement x="270" y="0" width="100" height="40" uuid="4698541b-cc98-4a2e-b532-d24e97529225"/>
+            </rectangle>
+            <rectangle>
+                <reportElement x="370" y="0" width="90" height="40" uuid="89d15cbd-3493-421d-81a8-591ed111d2cf"/>
+            </rectangle>
+            <rectangle>
+                <reportElement x="460" y="0" width="90" height="40" uuid="5c641a87-861e-4339-a82c-f9ebcfdc9083"/>
+            </rectangle>
+            <textField isBlankWhenNull="true">
+                <reportElement x="90" y="5" width="70" height="30" uuid="d8a9712d-329d-43bd-a088-0ca27d4ebd5c"/>
+                <textFieldExpression><![CDATA[$F{d1}]]></textFieldExpression>
+            </textField>
+            <textField isBlankWhenNull="true">
+                <reportElement x="180" y="5" width="80" height="30" uuid="bd0633fb-9801-486f-96c2-1967930ac87d"/>
+                <textFieldExpression><![CDATA[$F{d2}]]></textFieldExpression>
+            </textField>
+            <textField isBlankWhenNull="true">
+                <reportElement x="280" y="5" width="70" height="30" uuid="a86fda18-21ba-49ca-b836-91047ae0e155"/>
+                <textFieldExpression><![CDATA[$F{d3}]]></textFieldExpression>
+            </textField>
+            <textField isBlankWhenNull="true">
+                <reportElement x="380" y="5" width="70" height="30" uuid="339a96d1-8f23-44c8-9bd8-422d10ff66b6"/>
+                <textFieldExpression><![CDATA[$F{d4}]]></textFieldExpression>
+            </textField>
+            <textField isBlankWhenNull="true">
+                <reportElement x="470" y="5" width="70" height="30" uuid="da0040cc-e908-4dea-80a7-285558df2ef1"/>
+                <textFieldExpression><![CDATA[$F{d5}]]></textFieldExpression>
+            </textField>
+        </band>
+    </columnHeader>
+    <detail>
+        <band height="606" splitType="Stretch">
+            <rectangle>
+                <reportElement x="0" y="0" width="80" height="40" uuid="53699a47-3dc5-41c8-86a1-d7c62bd1f464"/>
+            </rectangle>
+            <rectangle>
+                <reportElement x="80" y="0" width="90" height="40" uuid="98d6d353-3501-43aa-a7f1-f11a0e29e776"/>
+            </rectangle>
+            <rectangle>
+                <reportElement x="170" y="0" width="100" height="40" uuid="8b7cb013-820f-421b-a2d4-69f4900b656d"/>
+            </rectangle>
+            <rectangle>
+                <reportElement x="270" y="0" width="100" height="40" uuid="8ec2ae90-469a-4472-8ef5-5c373042ee73"/>
+            </rectangle>
+            <rectangle>
+                <reportElement x="370" y="0" width="90" height="40" uuid="234715b6-d887-4095-a8aa-302900aaf667"/>
+            </rectangle>
+            <rectangle>
+                <reportElement x="460" y="0" width="90" height="40" uuid="b2b4cea2-57f0-41fb-896b-7757ca5f5aa3"/>
+            </rectangle>
+            <rectangle>
+                <reportElement x="0" y="40" width="80" height="40" uuid="9c5d4feb-0950-4948-ad68-7462d483c4d3"/>
+            </rectangle>
+            <rectangle>
+                <reportElement x="80" y="40" width="90" height="40" uuid="64b3f435-da4e-4568-ab72-5650e48042dd"/>
+            </rectangle>
+            <rectangle>
+                <reportElement x="170" y="40" width="100" height="40" uuid="391f2c21-5340-4710-9c14-2bb7cdbc6700"/>
+            </rectangle>
+            <rectangle>
+                <reportElement x="270" y="40" width="100" height="40" uuid="944f88e5-6f22-4eb1-a68c-01b75e3126db"/>
+            </rectangle>
+            <rectangle>
+                <reportElement x="370" y="40" width="90" height="40" uuid="296fb40d-bc4f-4b3c-8ebc-52e81a1e8684"/>
+            </rectangle>
+            <rectangle>
+                <reportElement x="460" y="40" width="90" height="40" uuid="e5c07fa1-5309-42e3-94f4-af01934790fe"/>
+            </rectangle>
+            <rectangle>
+                <reportElement x="0" y="80" width="550" height="40" uuid="b2bcdfc0-39be-4060-968f-98d399bbc2da"/>
+            </rectangle>
+            <rectangle>
+                <reportElement x="0" y="120" width="80" height="40" uuid="355c7143-9080-40a2-b585-1281a2cddba1"/>
+            </rectangle>
+            <rectangle>
+                <reportElement x="80" y="120" width="90" height="40" uuid="9b17dc5b-cf36-4fd6-8b65-97531510d879"/>
+            </rectangle>
+            <rectangle>
+                <reportElement x="170" y="120" width="100" height="40" uuid="8c0d714b-1bf8-40d4-af13-e7d8b08f07c4"/>
+            </rectangle>
+            <rectangle>
+                <reportElement x="270" y="120" width="100" height="40" uuid="7a4aac1d-8ce2-4bf4-9c92-5785a6d4de34"/>
+            </rectangle>
+            <rectangle>
+                <reportElement x="370" y="120" width="90" height="40" uuid="0c30a77e-e32b-4778-9c13-abc042fffe92"/>
+            </rectangle>
+            <rectangle>
+                <reportElement x="460" y="120" width="90" height="40" uuid="9bb63431-9848-47d9-b117-383fec9c6598"/>
+            </rectangle>
+            <rectangle>
+                <reportElement x="0" y="160" width="80" height="40" uuid="12a8b690-9119-4f9f-bd48-14836f7a44ab"/>
+            </rectangle>
+            <rectangle>
+                <reportElement x="80" y="160" width="90" height="40" uuid="4a47fc0d-90cf-480f-9ae2-187b9f66ceaf"/>
+            </rectangle>
+            <rectangle>
+                <reportElement x="170" y="160" width="100" height="40" uuid="ee9fa71a-519c-45be-b407-b97476774de5"/>
+            </rectangle>
+            <rectangle>
+                <reportElement x="270" y="160" width="100" height="40" uuid="bf85c04d-1edf-44c2-b099-a2568fe4e7ef"/>
+            </rectangle>
+            <rectangle>
+                <reportElement x="370" y="160" width="90" height="40" uuid="95122964-34b6-40ba-a8e8-1ddf60e7cd2c"/>
+            </rectangle>
+            <rectangle>
+                <reportElement x="460" y="160" width="90" height="40" uuid="10b1a3fd-5757-4a85-816f-2d289f4747ad"/>
+            </rectangle>
+            <rectangle>
+                <reportElement x="0" y="200" width="550" height="40" uuid="d56beabb-4b5f-4307-9156-1d87fbe2876e"/>
+            </rectangle>
+            <rectangle>
+                <reportElement x="0" y="240" width="80" height="40" uuid="5f87efd8-44ef-424f-bcd5-99f8b01078da"/>
+            </rectangle>
+            <rectangle>
+                <reportElement x="80" y="240" width="90" height="40" uuid="c4e81d29-f6ba-4f13-922b-e613ea9ae012"/>
+            </rectangle>
+            <rectangle>
+                <reportElement x="170" y="240" width="100" height="40" uuid="efca727a-4d08-4c94-a72d-c0bf04f41f8e"/>
+            </rectangle>
+            <rectangle>
+                <reportElement x="270" y="240" width="100" height="40" uuid="f4ba67e3-b9d5-43c6-a9a4-b5f900d3e23a"/>
+            </rectangle>
+            <rectangle>
+                <reportElement x="370" y="240" width="90" height="40" uuid="f4eaee70-2759-49be-ac68-9b99637396ec"/>
+            </rectangle>
+            <rectangle>
+                <reportElement x="460" y="240" width="90" height="40" uuid="2ccc82ec-7738-4c38-83ba-8dfc1d186b34"/>
+            </rectangle>
+            <rectangle>
+                <reportElement x="0" y="280" width="80" height="40" uuid="a7cffce7-7151-46e1-bfcb-118874e7cd76"/>
+            </rectangle>
+            <rectangle>
+                <reportElement x="80" y="280" width="90" height="40" uuid="1e4739a4-df24-4875-a11a-ea44f9edf5ff"/>
+            </rectangle>
+            <rectangle>
+                <reportElement x="170" y="280" width="100" height="40" uuid="651b62f3-901e-4692-b33a-b2b48d89efd6"/>
+            </rectangle>
+            <rectangle>
+                <reportElement x="270" y="280" width="100" height="40" uuid="7939e6fc-f389-4b82-88c9-662f090bfbfb"/>
+            </rectangle>
+            <rectangle>
+                <reportElement x="370" y="280" width="90" height="40" uuid="4fdd68fa-3df5-4e96-bc8f-0cf9566f51dc"/>
+            </rectangle>
+            <rectangle>
+                <reportElement x="460" y="280" width="90" height="40" uuid="c8e396f5-4590-48e1-a3e6-d7a824d5b24b"/>
+            </rectangle>
+            <rectangle>
+                <reportElement x="0" y="320" width="550" height="40" uuid="5da62516-2a89-4131-b5df-810ff0a47a6b"/>
+            </rectangle>
+            <rectangle>
+                <reportElement x="0" y="360" width="80" height="40" uuid="d1e69dbf-ba76-411c-bbf6-ea1e2966711f"/>
+            </rectangle>
+            <rectangle>
+                <reportElement x="80" y="360" width="90" height="40" uuid="f8853c78-112b-4d68-b008-7ac3f3dd770d"/>
+            </rectangle>
+            <rectangle>
+                <reportElement x="170" y="360" width="100" height="40" uuid="65fb31ff-d450-4c36-a071-5fd3d5397bb6"/>
+            </rectangle>
+            <rectangle>
+                <reportElement x="270" y="360" width="100" height="40" uuid="dfbaf600-1702-4e92-b01f-3b5d14bd747b"/>
+            </rectangle>
+            <rectangle>
+                <reportElement x="370" y="360" width="90" height="40" uuid="d0a767ec-fb97-464d-a0e8-fce5ba8561a2"/>
+            </rectangle>
+            <rectangle>
+                <reportElement x="460" y="360" width="90" height="40" uuid="a59473c0-1a0b-4f46-a210-a7ffb3a67799"/>
+            </rectangle>
+            <rectangle>
+                <reportElement x="0" y="400" width="80" height="40" uuid="35ac5517-105d-45ab-9f7f-b3d9ca0025bc"/>
+            </rectangle>
+            <rectangle>
+                <reportElement x="80" y="400" width="90" height="40" uuid="cff789b4-6015-4824-8cab-6c83b1a6507d"/>
+            </rectangle>
+            <rectangle>
+                <reportElement x="170" y="400" width="100" height="40" uuid="e4e31675-72f3-4ab1-b475-8b82e4eb9a47"/>
+            </rectangle>
+            <rectangle>
+                <reportElement x="270" y="400" width="100" height="40" uuid="5504c67e-d558-4f5f-9de7-45bc5401a78b"/>
+            </rectangle>
+            <rectangle>
+                <reportElement x="370" y="400" width="90" height="40" uuid="0cd7668b-db41-4e87-a55b-152edccd8a9e"/>
+            </rectangle>
+            <rectangle>
+                <reportElement x="460" y="400" width="90" height="40" uuid="cf3716d6-a2c0-44b4-b3d2-8865f8742d95"/>
+            </rectangle>
+            <rectangle>
+                <reportElement x="0" y="440" width="550" height="40" uuid="59938686-583b-40f8-ba7f-ceaa0c1517b1"/>
+            </rectangle>
+            <rectangle>
+                <reportElement x="0" y="480" width="80" height="40" uuid="e045f371-aa2e-491d-b508-830c0ddffe1c"/>
+            </rectangle>
+            <rectangle>
+                <reportElement x="80" y="480" width="90" height="40" uuid="92e2776d-dbbc-43fb-af2d-9b156274e58a"/>
+            </rectangle>
+            <rectangle>
+                <reportElement x="170" y="480" width="100" height="40" uuid="3882bfa3-d1be-43c6-8fbc-f99d85a88ff5"/>
+            </rectangle>
+            <rectangle>
+                <reportElement x="270" y="480" width="100" height="40" uuid="5142bd9b-e30a-4f4b-91cb-a7b9398fda19"/>
+            </rectangle>
+            <rectangle>
+                <reportElement x="370" y="480" width="90" height="40" uuid="72748fce-2ae5-4857-8410-eddc7a66acd0"/>
+            </rectangle>
+            <rectangle>
+                <reportElement x="460" y="480" width="90" height="40" uuid="8d642626-1aaf-4b1a-8b98-d633668ffc01"/>
+            </rectangle>
+            <rectangle>
+                <reportElement x="0" y="520" width="80" height="40" uuid="842eecf5-3539-41e5-aace-a0cd1d5851f1"/>
+            </rectangle>
+            <rectangle>
+                <reportElement x="80" y="520" width="90" height="40" uuid="82e38289-234f-4770-8b49-0f67b6269e43"/>
+            </rectangle>
+            <rectangle>
+                <reportElement x="170" y="520" width="100" height="40" uuid="54894d8f-8a01-45fb-9b43-b274eaab6019"/>
+            </rectangle>
+            <rectangle>
+                <reportElement x="270" y="520" width="100" height="40" uuid="d9a4dffe-53df-430a-a32a-80196c7f725d"/>
+            </rectangle>
+            <rectangle>
+                <reportElement x="370" y="520" width="90" height="40" uuid="7c6c6d63-3719-4395-9cb7-a50578795d2f"/>
+            </rectangle>
+            <rectangle>
+                <reportElement x="460" y="520" width="90" height="40" uuid="2f64fa75-ab94-4993-80f8-3b31e0b7b3ef"/>
+            </rectangle>
+            <rectangle>
+                <reportElement x="0" y="560" width="550" height="40" uuid="74ed6699-3bb8-4a15-a2da-886380c5efda"/>
+            </rectangle>
+            <textField isBlankWhenNull="true">
+                <reportElement x="15" y="10" width="50" height="20" uuid="e8cc872b-6554-4464-9f27-e790db02b612"/>
+                <textFieldExpression><![CDATA[$F{t1}]]></textFieldExpression>
+            </textField>
+            <textField isBlankWhenNull="true">
+                <reportElement x="15" y="50" width="50" height="20" uuid="d62d37fc-cd39-4928-820a-05c16be775d0"/>
+                <textFieldExpression><![CDATA[$F{t2}]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement x="190" y="90" width="130" height="20" uuid="9c4bd35b-ed3b-49bd-9433-0d576f08057d"/>
+                <text><![CDATA[SHORT BREAK]]></text>
+            </staticText>
+            <textField isBlankWhenNull="true">
+                <reportElement x="20" y="135" width="50" height="20" uuid="32a53f03-a56b-4962-bd01-cda1b454bdfa"/>
+                <textFieldExpression><![CDATA[$F{t3}]]></textFieldExpression>
+            </textField>
+            <textField isBlankWhenNull="true">
+                <reportElement x="20" y="170" width="50" height="20" uuid="74490be7-fa22-4fda-9a76-6fe4cc7c0d10"/>
+                <textFieldExpression><![CDATA[$F{t4}]]></textFieldExpression>
+            </textField>
+            <textField isBlankWhenNull="true">
+                <reportElement x="20" y="250" width="50" height="20" uuid="f214da8b-9195-415a-a046-600249dfd6d5"/>
+                <textFieldExpression><![CDATA[$F{t5}]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement x="190" y="210" width="130" height="20" uuid="218d1572-d6b8-4463-b8de-82fff92fc500"/>
+                <text><![CDATA[LONGBREAK]]></text>
+            </staticText>
+            <textField isBlankWhenNull="true">
+                <reportElement x="20" y="290" width="50" height="20" uuid="52396be4-b19d-4842-ab70-82205648a299"/>
+                <textFieldExpression><![CDATA[$F{t6}]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement x="190" y="330" width="130" height="20" uuid="cc48513f-1ad2-4df6-a15a-6460979fe5cc"/>
+                <text><![CDATA[LUNCH]]></text>
+            </staticText>
+            <textField isBlankWhenNull="true">
+                <reportElement x="20" y="370" width="50" height="20" uuid="3c3dcf09-6654-4501-afd7-03bdf16f6f72"/>
+                <textFieldExpression><![CDATA[$F{t7}]]></textFieldExpression>
+            </textField>
+            <textField isBlankWhenNull="true">
+                <reportElement x="20" y="410" width="50" height="20" uuid="66940bfd-a8b4-422b-ab21-630d707551cb"/>
+                <textFieldExpression><![CDATA[$F{t8}]]></textFieldExpression>
+            </textField>
+            <textField isBlankWhenNull="true">
+                <reportElement x="20" y="490" width="50" height="20" uuid="051d485a-3e78-4c3f-b744-2295320f0057"/>
+                <textFieldExpression><![CDATA[$F{t9}]]></textFieldExpression>
+            </textField>
+            <textField isBlankWhenNull="true">
+                <reportElement x="20" y="530" width="50" height="20" uuid="be0ba5e7-e29c-4850-a5f3-052cef7b7667"/>
+                <textFieldExpression><![CDATA[$F{t10}]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement x="190" y="450" width="130" height="20" uuid="b8bc6327-a3ca-4021-9899-884692fd3d9b"/>
+                <text><![CDATA[BREAK]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="200" y="570" width="130" height="20" uuid="338c8c0a-3d7d-461d-ac3b-4ce1a0964e5f"/>
+                <text><![CDATA[GAMES]]></text>
+            </staticText>
+            <textField isBlankWhenNull="true">
+                <reportElement x="100" y="10" width="50" height="20" uuid="c2557119-77fc-48cb-9502-d69556f30ceb"/>
+                <textFieldExpression><![CDATA[$F{l1m}]]></textFieldExpression>
+            </textField>
+            <textField isBlankWhenNull="true">
+                <reportElement x="100" y="50" width="50" height="20" uuid="b023514b-cf1b-420d-b150-5fe40987c9d0"/>
+                <textFieldExpression><![CDATA[$F{l2m}]]></textFieldExpression>
+            </textField>
+            <textField isBlankWhenNull="true">
+                <reportElement x="100" y="130" width="50" height="20" uuid="a835eaba-b594-487f-9f32-0f6e4b7b4f90"/>
+                <textFieldExpression><![CDATA[$F{l3m}]]></textFieldExpression>
+            </textField>
+            <textField isBlankWhenNull="true">
+                <reportElement x="100" y="170" width="50" height="20" uuid="7e2e659c-860c-46d2-a402-6338cd43bc64"/>
+                <textFieldExpression><![CDATA[$F{l4m}]]></textFieldExpression>
+            </textField>
+            <textField isBlankWhenNull="true">
+                <reportElement x="100" y="250" width="50" height="20" uuid="64209bd9-f8c0-4f9c-9e20-a9f34e98bb8e"/>
+                <textFieldExpression><![CDATA[$F{l5m}]]></textFieldExpression>
+            </textField>
+            <textField isBlankWhenNull="true">
+                <reportElement x="100" y="290" width="50" height="20" uuid="f934e378-6374-4ef8-ab6b-f9df39a0369d"/>
+                <textFieldExpression><![CDATA[$F{l6m}]]></textFieldExpression>
+            </textField>
+            <textField isBlankWhenNull="true">
+                <reportElement x="100" y="370" width="50" height="20" uuid="e1a1c9cc-d947-4bc2-89b1-d30bdb566982"/>
+                <textFieldExpression><![CDATA[$F{l7m}]]></textFieldExpression>
+            </textField>
+            <textField isBlankWhenNull="true">
+                <reportElement x="100" y="410" width="50" height="20" uuid="c5722a20-4d1c-4626-8166-7cec8342a10e"/>
+                <textFieldExpression><![CDATA[$F{l8m}]]></textFieldExpression>
+            </textField>
+            <textField isBlankWhenNull="true">
+                <reportElement x="100" y="490" width="50" height="20" uuid="87868072-e0c6-4779-856a-9fa46d9057e1"/>
+                <textFieldExpression><![CDATA[$F{l9m}]]></textFieldExpression>
+            </textField>
+            <textField isBlankWhenNull="true">
+                <reportElement x="100" y="530" width="50" height="20" uuid="f14d0768-8ad6-4557-b7b9-9d2cb211523e"/>
+                <textFieldExpression><![CDATA[$F{l10m}]]></textFieldExpression>
+            </textField>
+            <textField isBlankWhenNull="true">
+                <reportElement x="190" y="10" width="50" height="20" uuid="e6f64f2d-ba8f-4287-be06-9354e1dfb0cf"/>
+                <textFieldExpression><![CDATA[$F{l1t}]]></textFieldExpression>
+            </textField>
+            <textField isBlankWhenNull="true">
+                <reportElement x="195" y="50" width="50" height="20" uuid="ee896e07-2ffc-4e8b-923c-6dfc71674ff4"/>
+                <textFieldExpression><![CDATA[$F{l2t}]]></textFieldExpression>
+            </textField>
+            <textField isBlankWhenNull="true">
+                <reportElement x="190" y="130" width="50" height="20" uuid="1019aa62-5b01-45a3-b7f8-7c8fbf46d851"/>
+                <textFieldExpression><![CDATA[$F{l3t}]]></textFieldExpression>
+            </textField>
+            <textField isBlankWhenNull="true">
+                <reportElement x="190" y="170" width="50" height="20" uuid="b9c6a709-30e8-43e0-b80c-1fd37a771c1e"/>
+                <textFieldExpression><![CDATA[$F{l4t}]]></textFieldExpression>
+            </textField>
+            <textField isBlankWhenNull="true">
+                <reportElement x="190" y="250" width="50" height="20" uuid="f7461ea5-1169-4a03-97cb-6b85ee40ee8e"/>
+                <textFieldExpression><![CDATA[$F{l5t}]]></textFieldExpression>
+            </textField>
+            <textField isBlankWhenNull="true">
+                <reportElement x="190" y="290" width="50" height="20" uuid="2786859e-e60d-4c69-aef9-53b4fd0c3cf8"/>
+                <textFieldExpression><![CDATA[$F{l6t}]]></textFieldExpression>
+            </textField>
+            <textField isBlankWhenNull="true">
+                <reportElement x="190" y="370" width="50" height="20" uuid="d4079ea2-08a6-48b1-baa7-2328cb51f520"/>
+                <textFieldExpression><![CDATA[$F{l7t}]]></textFieldExpression>
+            </textField>
+            <textField isBlankWhenNull="true">
+                <reportElement x="190" y="410" width="50" height="20" uuid="a4928572-0350-4c0b-bc1c-429f44d38829"/>
+                <textFieldExpression><![CDATA[$F{l8t}]]></textFieldExpression>
+            </textField>
+            <textField isBlankWhenNull="true">
+                <reportElement x="190" y="490" width="50" height="20" uuid="3b9f0343-84c0-44fd-97e1-589bca7f3ee7"/>
+                <textFieldExpression><![CDATA[$F{l9t}]]></textFieldExpression>
+            </textField>
+            <textField isBlankWhenNull="true">
+                <reportElement x="190" y="530" width="50" height="20" uuid="899e7629-6331-4019-a99f-8899b6aaeef4"/>
+                <textFieldExpression><![CDATA[$F{l10t}]]></textFieldExpression>
+            </textField>
+            <textField isBlankWhenNull="true">
+                <reportElement x="290" y="10" width="50" height="20" uuid="20199d3f-e91e-48d5-8227-3b3eae6c96c2"/>
+                <textFieldExpression><![CDATA[$F{l1w}]]></textFieldExpression>
+            </textField>
+            <textField isBlankWhenNull="true">
+                <reportElement x="290" y="50" width="50" height="20" uuid="09b63b71-792f-4d0e-8bea-0b8daa680b3a"/>
+                <textFieldExpression><![CDATA[$F{l2w}]]></textFieldExpression>
+            </textField>
+            <textField isBlankWhenNull="true">
+                <reportElement x="295" y="130" width="50" height="20" uuid="8adc8274-b599-4ba7-a8be-3dcb7f509ef6"/>
+                <textFieldExpression><![CDATA[$F{l3w}]]></textFieldExpression>
+            </textField>
+            <textField isBlankWhenNull="true">
+                <reportElement x="295" y="170" width="50" height="20" uuid="ee99225c-886c-4011-bbdb-80133dc39d6e"/>
+                <textFieldExpression><![CDATA[$F{l4w}]]></textFieldExpression>
+            </textField>
+            <textField isBlankWhenNull="true">
+                <reportElement x="295" y="250" width="50" height="20" uuid="47d6fc15-f363-477c-9d4b-ce9a39758aa6"/>
+                <textFieldExpression><![CDATA[$F{l5w}]]></textFieldExpression>
+            </textField>
+            <textField isBlankWhenNull="true">
+                <reportElement x="295" y="290" width="50" height="20" uuid="b0550187-dd3d-44fa-bbec-2051b33ea008"/>
+                <textFieldExpression><![CDATA[$F{l6w}]]></textFieldExpression>
+            </textField>
+            <textField isBlankWhenNull="true">
+                <reportElement x="290" y="370" width="50" height="20" uuid="59b1f8af-78c8-41d5-886d-a68d36569983"/>
+                <textFieldExpression><![CDATA[$F{l7w}]]></textFieldExpression>
+            </textField>
+            <textField isBlankWhenNull="true">
+                <reportElement x="290" y="410" width="50" height="20" uuid="1aa05e38-af13-46f0-ac0b-bc02a2dbe9df"/>
+                <textFieldExpression><![CDATA[$F{l8w}]]></textFieldExpression>
+            </textField>
+            <textField isBlankWhenNull="true">
+                <reportElement x="290" y="490" width="50" height="20" uuid="ef9340dd-191f-4aeb-bd3e-33024d017d31"/>
+                <textFieldExpression><![CDATA[$F{l9w}]]></textFieldExpression>
+            </textField>
+            <textField isBlankWhenNull="true">
+                <reportElement x="290" y="530" width="50" height="20" uuid="4438b49b-1a3b-4020-a25f-6031329cc7c7"/>
+                <textFieldExpression><![CDATA[$F{l10w}]]></textFieldExpression>
+            </textField>
+            <textField isBlankWhenNull="true">
+                <reportElement x="390" y="10" width="50" height="20" uuid="1709becd-6b64-4fae-b436-4f12d5532eab"/>
+                <textFieldExpression><![CDATA[$F{l1th}]]></textFieldExpression>
+            </textField>
+            <textField isBlankWhenNull="true">
+                <reportElement x="390" y="50" width="50" height="20" uuid="ad53cb15-1000-4264-9a24-a148f95cf214"/>
+                <textFieldExpression><![CDATA[$F{l2th}]]></textFieldExpression>
+            </textField>
+            <textField isBlankWhenNull="true">
+                <reportElement x="390" y="130" width="50" height="20" uuid="bd8e1aae-a071-40ee-bb31-494f75922e3e"/>
+                <textFieldExpression><![CDATA[$F{l3th}]]></textFieldExpression>
+            </textField>
+            <textField isBlankWhenNull="true">
+                <reportElement x="390" y="170" width="50" height="20" uuid="fbc061d1-f9be-45ae-8ed7-d7bfc9bdeb58"/>
+                <textFieldExpression><![CDATA[$F{l4th}]]></textFieldExpression>
+            </textField>
+            <textField isBlankWhenNull="true">
+                <reportElement x="390" y="250" width="50" height="20" uuid="bd204613-b91d-4f7e-9752-e2b491e7add0"/>
+                <textFieldExpression><![CDATA[$F{l5th}]]></textFieldExpression>
+            </textField>
+            <textField isBlankWhenNull="true">
+                <reportElement x="390" y="290" width="50" height="20" uuid="47fe4b06-4f74-42ae-91ee-f6f1e6a8cb3e"/>
+                <textFieldExpression><![CDATA[$F{l6th}]]></textFieldExpression>
+            </textField>
+            <textField isBlankWhenNull="true">
+                <reportElement x="390" y="370" width="50" height="20" uuid="6bf6ea7b-1ad2-4480-8ba1-90edd10fde6b"/>
+                <textFieldExpression><![CDATA[$F{l7th}]]></textFieldExpression>
+            </textField>
+            <textField isBlankWhenNull="true">
+                <reportElement x="390" y="410" width="50" height="20" uuid="f58740ea-1de6-4aef-bfca-e8aad0c05ac1"/>
+                <textFieldExpression><![CDATA[$F{l8th}]]></textFieldExpression>
+            </textField>
+            <textField isBlankWhenNull="true">
+                <reportElement x="390" y="490" width="50" height="20" uuid="2e5e72a5-ef2c-4499-aeb4-4b180ce8dc7d"/>
+                <textFieldExpression><![CDATA[$F{l9th}]]></textFieldExpression>
+            </textField>
+            <textField isBlankWhenNull="true">
+                <reportElement x="390" y="530" width="50" height="20" uuid="dcd17bca-f81f-4eef-aed9-2b204fb8f7ef"/>
+                <textFieldExpression><![CDATA[$F{l10th}]]></textFieldExpression>
+            </textField>
+            <textField isBlankWhenNull="true">
+                <reportElement x="480" y="10" width="50" height="20" uuid="c2a68283-4b1f-4458-a6b7-2932110feb56"/>
+                <textFieldExpression><![CDATA[$F{l1f}]]></textFieldExpression>
+            </textField>
+            <textField isBlankWhenNull="true">
+                <reportElement x="480" y="50" width="50" height="20" uuid="d2bc6a27-685e-495e-a7bf-77550f19e7cc"/>
+                <textFieldExpression><![CDATA[$F{l2f}]]></textFieldExpression>
+            </textField>
+            <textField isBlankWhenNull="true">
+                <reportElement x="480" y="130" width="50" height="20" uuid="605c88c3-770f-4327-a463-a697e0b29a74"/>
+                <textFieldExpression><![CDATA[$F{l3f}]]></textFieldExpression>
+            </textField>
+            <textField isBlankWhenNull="true">
+                <reportElement x="480" y="170" width="50" height="20" uuid="e913597a-d2cf-485a-b410-bcee3280eb46"/>
+                <textFieldExpression><![CDATA[$F{l4f}]]></textFieldExpression>
+            </textField>
+            <textField isBlankWhenNull="true">
+                <reportElement x="480" y="250" width="50" height="20" uuid="f430f4d2-4742-42a7-9599-8adcc801c011"/>
+                <textFieldExpression><![CDATA[$F{l5f}]]></textFieldExpression>
+            </textField>
+            <textField isBlankWhenNull="true">
+                <reportElement x="480" y="290" width="50" height="20" uuid="77b6a3ab-f54f-4859-8f15-9e35646efff4"/>
+                <textFieldExpression><![CDATA[$F{l6f}]]></textFieldExpression>
+            </textField>
+            <textField isBlankWhenNull="true">
+                <reportElement x="480" y="370" width="50" height="20" uuid="c5168a3c-b037-4d0e-872f-f0d11fad0438"/>
+                <textFieldExpression><![CDATA[$F{l7f}]]></textFieldExpression>
+            </textField>
+            <textField isBlankWhenNull="true">
+                <reportElement x="480" y="410" width="50" height="20" uuid="ada61369-bf58-4432-8aef-4684c38e2564"/>
+                <textFieldExpression><![CDATA[$F{l8f}]]></textFieldExpression>
+            </textField>
+            <textField isBlankWhenNull="true">
+                <reportElement x="480" y="490" width="50" height="20" uuid="025c81ea-fff9-48be-8d02-c9b3352e4726"/>
+                <textFieldExpression><![CDATA[$F{l9f}]]></textFieldExpression>
+            </textField>
+            <textField isBlankWhenNull="true">
+                <reportElement x="480" y="530" width="50" height="20" uuid="4e841c41-7705-4a30-ad52-8b063f16d917"/>
+                <textFieldExpression><![CDATA[$F{l10f}]]></textFieldExpression>
+            </textField>
+
+            <textField isBlankWhenNull="true">
+                <reportElement x="15" y="90" width="50" height="20" uuid="cbb5582b-e7a4-42bf-8ea5-3b48ee0be83d"/>
+                <textFieldExpression><![CDATA[$F{bt1}]]></textFieldExpression>
+            </textField>
+            <textField isBlankWhenNull="true">
+                <reportElement x="20" y="210" width="50" height="20" uuid="f7f02e57-af2b-4c99-88e7-1e818106ba5a"/>
+                <textFieldExpression><![CDATA[$F{bt2}]]></textFieldExpression>
+            </textField>
+            <textField isBlankWhenNull="true">
+                <reportElement x="20" y="330" width="50" height="20" uuid="b0c19375-3909-48ce-bb24-a132e13bb5fd"/>
+                <textFieldExpression><![CDATA[$F{bt3}]]></textFieldExpression>
+            </textField>
+            <textField isBlankWhenNull="true">
+                <reportElement x="20" y="450" width="50" height="20" uuid="db1b19b8-d597-4b62-a714-8b19b34c9092"/>
+                <textFieldExpression><![CDATA[$F{bt4}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="20" y="570" width="50" height="20" uuid="d1649db8-7c0e-40f2-b9db-5984a65c6c75"/>
+                <textFieldExpression><![CDATA[$F{bt5}]]></textFieldExpression>
+            </textField>
+        </band>
+    </detail>
+</jasperReport>

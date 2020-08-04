@@ -89,9 +89,9 @@
                     </li>
                     <li><a><i class="fa fa-hourglass"></i> Timetable Manager <span class="fa fa-chevron-down"></span></a>
                         <ul class="nav child_menu nav-collapse">
-                            <li><a href="<c:url value="#"/>">Days Setup</a></li>
-                            <li><a href="<c:url value="#"/>">Lessons Setup</a></li>
-                            <li><a href="<c:url value="#"/>">Lessons Allocation</a></li>
+                            <li><a href="<c:url value="/protected/timetable/days"/>">Days Setup</a></li>
+                            <li><a href="<c:url value="/protected/timetable/lessons"/>">Lessons Setup</a></li>
+                            <li><a href="<c:url value="/protected/timetable/allocations"/>">Lessons Allocation</a></li>
                         </ul>
                     </li>
                     <li><a><i class="fa fa-book"></i> Library Manager <span class="fa fa-chevron-down"></span></a>

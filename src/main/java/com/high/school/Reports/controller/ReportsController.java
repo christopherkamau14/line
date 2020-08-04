@@ -2,6 +2,7 @@ package com.high.school.Reports.controller;
 
 import com.high.school.Reports.Repts;
 import com.high.school.Reports.service.ReportsInterface;
+import com.high.school.academics.model.Teachers;
 import com.high.school.examination.model.ExamRecording;
 import com.high.school.examination.model.ExamRegister;
 import com.high.school.examination.model.PositioningBean;
@@ -134,7 +135,42 @@ public class ReportsController {
 
       return "examprocess";
     }
+    @GetMapping("/classtt")
+    public String classtt(@RequestParam Forms forms,HttpServletResponse response) throws IOException, JRException {
 
+        JasperPrint jasperPrint = null;
+
+        jasperPrint = repts.classtt(forms);
+        byte[] pdf = null;
+
+        String filename = "timetable.pdf";
+        pdf = JasperExportManager.exportReportToPdf(jasperPrint);
+        response.setContentType("application/x-download");
+        response.setContentLength(pdf.length);
+        response.addHeader("Content-disposition", "attachment; filename=\"" + filename + "\"");
+        OutputStream out = response.getOutputStream();
+        JasperExportManager.exportReportToPdfStream(jasperPrint, out);
+
+        return "allocations";
+    }
+    @GetMapping("/teachertt")
+    public String classtt(@RequestParam Teachers teachers, HttpServletResponse response) throws IOException, JRException {
+
+        JasperPrint jasperPrint = null;
+
+        jasperPrint = repts.teachertt(teachers);
+        byte[] pdf = null;
+
+        String filename = "timetable.pdf";
+        pdf = JasperExportManager.exportReportToPdf(jasperPrint);
+        response.setContentType("application/x-download");
+        response.setContentLength(pdf.length);
+        response.addHeader("Content-disposition", "attachment; filename=\"" + filename + "\"");
+        OutputStream out = response.getOutputStream();
+        JasperExportManager.exportReportToPdfStream(jasperPrint, out);
+
+        return "allocations";
+    }
     @GetMapping("/subjectanalysis")
     public String subjectAnalysisReport(@RequestParam ExamRegister exam,@RequestParam Forms forms,HttpServletResponse response) throws IOException, JRException {
 

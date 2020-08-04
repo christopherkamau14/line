@@ -238,8 +238,24 @@
         <put-attribute name="body" value="/WEB-INF/pages/exams/examrecording.jsp" />
     </definition>
 
+    <definition name="allocations" extends="base.definition">
+        <put-attribute name="title" value="Leaveout Information" />
+        <put-attribute name="body" value="/WEB-INF/pages/timetabling/allocation.jsp" />
+    </definition>
+
     <definition name="exammerge" extends="base.definition">
         <put-attribute name="title" value="Leaveout Information" />
         <put-attribute name="body" value="/WEB-INF/pages/exams/merge.jsp" />
     </definition>
+
+    <definition name="days" extends="base.definition">
+        <put-attribute name="title" value="Leaveout Information" />
+        <put-attribute name="body" value="/WEB-INF/pages/timetabling/days.jsp" />
+    </definition>
+
+    <definition name="lessons" extends="base.definition">
+        <put-attribute name="title" value="Leaveout Information" />
+        <put-attribute name="body" value="/WEB-INF/pages/timetabling/lessons.jsp" />
+    </definition>
+
 </tiles-definitions>
