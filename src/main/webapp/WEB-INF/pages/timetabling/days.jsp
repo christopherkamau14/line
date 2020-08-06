@@ -37,7 +37,7 @@
 
                         <div class="col-md-8 col-xs-12">
                             <input name="code" id="code" class="form-control"
-                                   placeholder="" required>
+                                   placeholder="" readonly>
                         </div>
                     </div>
                         <div class="col-md-6 col-xs-12">

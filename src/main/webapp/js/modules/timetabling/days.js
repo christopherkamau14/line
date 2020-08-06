@@ -7,7 +7,7 @@ getDaysTab()
 })
 function saveDay() {
     $('#btn-save-day').on('click',function () {
-        if($("#code").val()==='' ||$("#name").val()===''){
+        if($("#name").val()===''){
             bootbox.alert("Input a day to save");
         }else {
             var $currForm = $('#days-form');
@@ -64,7 +64,7 @@ function getDaysTab() {
         pageLength: 15,
         destroy: true,
         columns: [
-            { data: "code" },
+            { data: "dayCode" },
             { data: "name" },
 
         ]
@@ -79,7 +79,7 @@ function getDaysTab() {
         $(this).addClass('active').siblings().removeClass('active');
         var aData = table.rows('.active').data();
         $('#day-id').val(aData[0].dayCode);
-        $('#code').val(aData[0].code);
+        $('#code').val(aData[0].dayCode);
         $('#name').val(aData[0].name);
 
     })

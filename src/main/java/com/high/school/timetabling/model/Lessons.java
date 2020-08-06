@@ -5,15 +5,13 @@ import java.util.Date;
 
 @Entity
 @Table(name="lessons_setups")
+@SequenceGenerator(name="lessonseq", initialValue=1, allocationSize=100)
 public class Lessons {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy=GenerationType.SEQUENCE, generator="lessonseq")
     @Column(name="lesson_id")
     private Long lessonId;
-
-    @Column(name="lesson_code")
-    private String lessonCode;
 
     @Column(name="lesson_name")
     private String lessonName;
@@ -33,14 +31,6 @@ public class Lessons {
 
     public void setLessonId(Long lessonId) {
         this.lessonId = lessonId;
-    }
-
-    public String getLessonCode() {
-        return lessonCode;
-    }
-
-    public void setLessonCode(String lessonCode) {
-        this.lessonCode = lessonCode;
     }
 
     public String getLessonName() {

@@ -993,313 +993,313 @@ public class ReportsService implements ReportsInterface {
         DateFormat dateFormat = new SimpleDateFormat("hh:mm");
         TimetableBean t=new TimetableBean();
         for(Lessons l:gkc){
-            if(l.getLessonCode().equals("3")){
+            if(l.getLessonId()==3){
                 t.setBt1(dateFormat.format(l.getLessonStart()));
             }
-            if(l.getLessonCode().equals("6")){
+            if(l.getLessonId()==6){
                 t.setBt2(dateFormat.format(l.getLessonStart()));
             }
-            if(l.getLessonCode().equals("9")){
+            if(l.getLessonId()==9){
                 t.setBt3(dateFormat.format(l.getLessonStart()));
             }
-            if(l.getLessonCode().equals("12")){
+            if(l.getLessonId()==12){
                 t.setBt4(dateFormat.format(l.getLessonStart()));
             }
-            if(l.getLessonCode().equals("15")){
+            if(l.getLessonId()==15){
                 t.setBt5(dateFormat.format(l.getLessonStart()));
             }
         }
         for(Allocations a:allocations){
-            if(a.getDays().getCode().equals("1")){
+            if(a.getDays().getDayCode()==1){
                 t.setD1(a.getDays().getName());
-                if(a.getLessons().getLessonCode().equals("1")){
+                if(a.getLessons().getLessonId()==1){
                     t.setL1m(a.getSubjects().getTimeTableName());
                     t.setT1(dateFormat.format(a.getLessons().getLessonStart()));
 
                 }
-                if(a.getLessons().getLessonCode().equals("2")){
+                if(a.getLessons().getLessonId()==2){
                     t.setL2m(a.getSubjects().getTimeTableName());
                     t.setT2(dateFormat.format(a.getLessons().getLessonStart()));
                 }
-                if(a.getLessons().getLessonCode().equals("4")){
+                if(a.getLessons().getLessonId()==4){
                     t.setL3m(a.getSubjects().getTimeTableName());
                     t.setT3(dateFormat.format(a.getLessons().getLessonStart()));
                 }
-                if(a.getLessons().getLessonCode().equals("5")){
+                if(a.getLessons().getLessonId()==5){
                     t.setL4m(a.getSubjects().getTimeTableName());
                     t.setT4(dateFormat.format(a.getLessons().getLessonStart()));
                 }
-                if(a.getLessons().getLessonCode().equals("7")){
+                if(a.getLessons().getLessonId()==7){
                     t.setL5m(a.getSubjects().getTimeTableName());
                     t.setT5(dateFormat.format(a.getLessons().getLessonStart()));
                 }
-                if(a.getLessons().getLessonCode().equals("8")){
+                if(a.getLessons().getLessonId()==8){
                     t.setL6m(a.getSubjects().getTimeTableName());
                     t.setT6(dateFormat.format(a.getLessons().getLessonStart()));
                 }
-                if(a.getLessons().getLessonCode().equals("10")){
+                if(a.getLessons().getLessonId()==10){
                     t.setL7m("PREPS");
                     t.setT7(dateFormat.format(a.getLessons().getLessonStart()));
                 }
-                if(a.getLessons().getLessonCode().equals("11")){
+                if(a.getLessons().getLessonId()==11){
                     t.setL8m(a.getSubjects().getTimeTableName());
                     t.setT8(dateFormat.format(a.getLessons().getLessonStart()));
                 }
-                if(a.getLessons().getLessonCode().equals("13")){
+                if(a.getLessons().getLessonId()==13){
                     t.setL9m(a.getSubjects().getTimeTableName());
                     t.setT9(dateFormat.format(a.getLessons().getLessonStart()));
                 }
-                if(a.getLessons().getLessonCode().equals("14")){
+                if(a.getLessons().getLessonId()==14){
                     t.setL10m(a.getSubjects().getTimeTableName());
                     t.setT10(dateFormat.format(a.getLessons().getLessonStart()));
                 }
             }
-            if(a.getDays().getCode().equals("2")){
+            if(a.getDays().getDayCode()==2){
                 t.setD2(a.getDays().getName());
-                if(a.getLessons().getLessonCode().equals("1")){
+                if(a.getLessons().getLessonId()==1){
                     t.setL1t(a.getSubjects().getTimeTableName());
                     if(t.getT1()==null) {
                         t.setT1(dateFormat.format(a.getLessons().getLessonStart()));
                     }
                 }
-                if(a.getLessons().getLessonCode().equals("2")){
+                if(a.getLessons().getLessonId()==2){
                     t.setL2t(a.getSubjects().getTimeTableName());
                     if(t.getT2()==null) {
                         t.setT2(dateFormat.format(a.getLessons().getLessonStart()));
                     }
                 }
-                if(a.getLessons().getLessonCode().equals("4")){
+                if(a.getLessons().getLessonId()==4){
                     t.setL3t(a.getSubjects().getTimeTableName());
                     if(t.getT3()==null) {
                         t.setT3(dateFormat.format(a.getLessons().getLessonStart()));
                     }
                 }
-                if(a.getLessons().getLessonCode().equals("5")){
+                if(a.getLessons().getLessonId()==5){
                     t.setL4t(a.getSubjects().getTimeTableName());
                     if(t.getT4()==null) {
                         t.setT4(dateFormat.format(a.getLessons().getLessonStart()));
                     }
                 }
-                if(a.getLessons().getLessonCode().equals("7")){
+                if(a.getLessons().getLessonId()==7){
                     t.setL5t(a.getSubjects().getTimeTableName());
                     if(t.getT5()==null) {
                         t.setT5(dateFormat.format(a.getLessons().getLessonStart()));
                     }
                 }
-                if(a.getLessons().getLessonCode().equals("8")){
+                if(a.getLessons().getLessonId()==8){
                     t.setL6t(a.getSubjects().getTimeTableName());
                     if(t.getT6()==null) {
                         t.setT6(dateFormat.format(a.getLessons().getLessonStart()));
                     }
                 }
-                if(a.getLessons().getLessonCode().equals("10")){
+                if(a.getLessons().getLessonId()==10){
                     t.setL7t("PREPS");
                     if(t.getT7()==null) {
                         t.setT7(dateFormat.format(a.getLessons().getLessonStart()));
                     }
                 }
-                if(a.getLessons().getLessonCode().equals("11")){
+                if(a.getLessons().getLessonId()==11){
                     t.setL8t(a.getSubjects().getTimeTableName());
                     if(t.getT8()==null) {
                         t.setT8(dateFormat.format(a.getLessons().getLessonStart()));
                     }
                 }
-                if(a.getLessons().getLessonCode().equals("13")){
+                if(a.getLessons().getLessonId()==13){
                     t.setL9t(a.getSubjects().getTimeTableName());
                     if(t.getT9()==null) {
                         t.setT9(dateFormat.format(a.getLessons().getLessonStart()));
                     }
                 }
-                if(a.getLessons().getLessonCode().equals("14")){
+                if(a.getLessons().getLessonId()==14){
                     t.setL10t(a.getSubjects().getTimeTableName());
                     if(t.getT10()==null) {
                         t.setT10(dateFormat.format(a.getLessons().getLessonStart()));
                     }
                 }
             }
-            if(a.getDays().getCode().equals("3")){
+            if(a.getDays().getDayCode()==3){
                 t.setD3(a.getDays().getName());
-                if(a.getLessons().getLessonCode().equals("1")){
+                if(a.getLessons().getLessonId()==1){
                     t.setL1w(a.getSubjects().getTimeTableName());
                     if(t.getT1()==null) {
                         t.setT1(dateFormat.format(a.getLessons().getLessonStart()));
                     }
                 }
-                if(a.getLessons().getLessonCode().equals("2")){
+                if(a.getLessons().getLessonId()==2){
                     t.setL2w(a.getSubjects().getTimeTableName());
                     if(t.getT2()==null) {
                         t.setT2(dateFormat.format(a.getLessons().getLessonStart()));
                     }
                 }
-                if(a.getLessons().getLessonCode().equals("4")){
+                if(a.getLessons().getLessonId()==4){
                     t.setL3w(a.getSubjects().getTimeTableName());
                     if(t.getT3()==null) {
                         t.setT3(dateFormat.format(a.getLessons().getLessonStart()));
                     }
                 }
-                if(a.getLessons().getLessonCode().equals("5")){
+                if(a.getLessons().getLessonId()==5){
                     t.setL4w(a.getSubjects().getTimeTableName());
                     if(t.getT4()==null) {
                         t.setT4(dateFormat.format(a.getLessons().getLessonStart()));
                     }
                 }
-                if(a.getLessons().getLessonCode().equals("7")){
+                if(a.getLessons().getLessonId()==7){
                     t.setL5w(a.getSubjects().getTimeTableName());
                     if(t.getT5()==null) {
                         t.setT5(dateFormat.format(a.getLessons().getLessonStart()));
                     }
                 }
-                if(a.getLessons().getLessonCode().equals("8")){
+                if(a.getLessons().getLessonId()==8){
                     t.setL6w(a.getSubjects().getTimeTableName());
                     if(t.getT6()==null) {
                         t.setT6(dateFormat.format(a.getLessons().getLessonStart()));
                     }
                 }
-                if(a.getLessons().getLessonCode().equals("10")){
+                if(a.getLessons().getLessonId()==10){
                     t.setL7w("PREPS");
                     if(t.getT7()==null) {
                         t.setT7(dateFormat.format(a.getLessons().getLessonStart()));
                     }
                 }
-                if(a.getLessons().getLessonCode().equals("11")){
+                if(a.getLessons().getLessonId()==11){
                     t.setL8w(a.getSubjects().getTimeTableName());
                     if(t.getT8()==null) {
                         t.setT8(dateFormat.format(a.getLessons().getLessonStart()));
                     }
                 }
-                if(a.getLessons().getLessonCode().equals("13")){
+                if(a.getLessons().getLessonId()==13){
                     t.setL9w(a.getSubjects().getTimeTableName());
                     if(t.getT9()==null) {
                         t.setT9(dateFormat.format(a.getLessons().getLessonStart()));
                     }
                 }
-                if(a.getLessons().getLessonCode().equals("14")){
+                if(a.getLessons().getLessonId()==14){
                     t.setL10w(a.getSubjects().getTimeTableName());
                     if(t.getT10()==null) {
                         t.setT10(dateFormat.format(a.getLessons().getLessonStart()));
                     }
                 }
             }
-            if(a.getDays().getCode().equals("4")){
+            if(a.getDays().getDayCode()==4){
                 t.setD4(a.getDays().getName());
-                if(a.getLessons().getLessonCode().equals("1")){
+                if(a.getLessons().getLessonId()==1){
                     t.setL1th(a.getSubjects().getTimeTableName());
                     if(t.getT1()==null) {
                         t.setT1(dateFormat.format(a.getLessons().getLessonStart()));
                     }
                 }
-                if(a.getLessons().getLessonCode().equals("2")){
+                if(a.getLessons().getLessonId()==2){
                     t.setL2th(a.getSubjects().getTimeTableName());
                     if(t.getT2()==null) {
                         t.setT2(dateFormat.format(a.getLessons().getLessonStart()));
                     }
                 }
-                if(a.getLessons().getLessonCode().equals("4")){
+                if(a.getLessons().getLessonId()==4){
                     t.setL3th(a.getSubjects().getTimeTableName());
                     if(t.getT3()==null) {
                         t.setT3(dateFormat.format(a.getLessons().getLessonStart()));
                     }
                 }
-                if(a.getLessons().getLessonCode().equals("5")){
+                if(a.getLessons().getLessonId()==5){
                     t.setL4th(a.getSubjects().getTimeTableName());
                     if(t.getT4()==null) {
                         t.setT4(dateFormat.format(a.getLessons().getLessonStart()));
                     }
                 }
-                if(a.getLessons().getLessonCode().equals("7")){
+                if(a.getLessons().getLessonId()==7){
                     t.setL5th(a.getSubjects().getTimeTableName());
                     if(t.getT5()==null) {
                         t.setT5(dateFormat.format(a.getLessons().getLessonStart()));
                     }
                 }
-                if(a.getLessons().getLessonCode().equals("8")){
+                if(a.getLessons().getLessonId()==8){
                     t.setL6th(a.getSubjects().getTimeTableName());
                     if(t.getT6()==null) {
                         t.setT6(dateFormat.format(a.getLessons().getLessonStart()));
                     }
                 }
-                if(a.getLessons().getLessonCode().equals("10")){
+                if(a.getLessons().getLessonId()==10){
                     t.setL7th("PREPS");
                     if(t.getT7()==null) {
                         t.setT7(dateFormat.format(a.getLessons().getLessonStart()));
                     }
                 }
-                if(a.getLessons().getLessonCode().equals("11")){
+                if(a.getLessons().getLessonId()==11){
                     t.setL8th(a.getSubjects().getTimeTableName());
                     if(t.getT8()==null) {
                         t.setT8(dateFormat.format(a.getLessons().getLessonStart()));
                     }
                 }
-                if(a.getLessons().getLessonCode().equals("13")){
+                if(a.getLessons().getLessonId()==13){
                     t.setL9th(a.getSubjects().getTimeTableName());
                     if(t.getT9()==null) {
                         t.setT9(dateFormat.format(a.getLessons().getLessonStart()));
                     }
                 }
-                if(a.getLessons().getLessonCode().equals("14")){
+                if(a.getLessons().getLessonId()==14){
                     t.setL10th(a.getSubjects().getTimeTableName());
                     if(t.getT10()==null) {
                         t.setT10(dateFormat.format(a.getLessons().getLessonStart()));
                     }
                 }
             }
-            if(a.getDays().getCode().equals("5")){
+            if(a.getDays().getDayCode()==5){
                 t.setD5(a.getDays().getName());
-                if(a.getLessons().getLessonCode().equals("1")){
+                if(a.getLessons().getLessonId()==1){
                     t.setL1f(a.getSubjects().getTimeTableName());
                     if(t.getT1()==null) {
                         t.setT1(dateFormat.format(a.getLessons().getLessonStart()));
                     }
                 }
-                if(a.getLessons().getLessonCode().equals("2")){
+                if(a.getLessons().getLessonId()==2){
                     t.setL2f(a.getSubjects().getTimeTableName());
                     if(t.getT2()==null) {
                         t.setT2(dateFormat.format(a.getLessons().getLessonStart()));
                     }
                 }
-                if(a.getLessons().getLessonCode().equals("4")){
+                if(a.getLessons().getLessonId()==4){
                     t.setL3f(a.getSubjects().getTimeTableName());
                     if(t.getT3()==null) {
                         t.setT3(dateFormat.format(a.getLessons().getLessonStart()));
                     }
                 }
-                if(a.getLessons().getLessonCode().equals("5")){
+                if(a.getLessons().getLessonId()==5){
                     t.setL4f(a.getSubjects().getTimeTableName());
                     if(t.getT4()==null) {
                         t.setT4(dateFormat.format(a.getLessons().getLessonStart()));
                     }
                 }
-                if(a.getLessons().getLessonCode().equals("7")){
+                if(a.getLessons().getLessonId()==7){
                     t.setL5f(a.getSubjects().getTimeTableName());
                     if(t.getT5()==null) {
                         t.setT5(dateFormat.format(a.getLessons().getLessonStart()));
                     }
                 }
-                if(a.getLessons().getLessonCode().equals("8")){
+                if(a.getLessons().getLessonId()==8){
                     t.setL6f(a.getSubjects().getTimeTableName());
                     if(t.getT6()==null) {
                         t.setT6(dateFormat.format(a.getLessons().getLessonStart()));
                     }
                 }
-                if(a.getLessons().getLessonCode().equals("10")){
+                if(a.getLessons().getLessonId()==10){
                     t.setL7f("PREPS");
                     if(t.getT7()==null) {
                         t.setT7(dateFormat.format(a.getLessons().getLessonStart()));
                     }
                 }
-                if(a.getLessons().getLessonCode().equals("11")){
+                if(a.getLessons().getLessonId()==11){
                     t.setL8f(a.getSubjects().getTimeTableName());
                     if(t.getT8()==null) {
                         t.setT8(dateFormat.format(a.getLessons().getLessonStart()));
                     }
                 }
-                if(a.getLessons().getLessonCode().equals("13")){
+                if(a.getLessons().getLessonId()==13){
                     t.setL9f(a.getSubjects().getTimeTableName());
                     if(t.getT9()==null) {
                         t.setT9(dateFormat.format(a.getLessons().getLessonStart()));
                     }
                 }
-                if(a.getLessons().getLessonCode().equals("14")){
+                if(a.getLessons().getLessonId()==14){
                     t.setL10f(a.getSubjects().getTimeTableName());
                     if(t.getT10()==null) {
                         t.setT10(dateFormat.format(a.getLessons().getLessonStart()));
@@ -1320,86 +1320,86 @@ public class ReportsService implements ReportsInterface {
         DateFormat dateFormat = new SimpleDateFormat("hh:mm");
         TeacherTableBean t=new TeacherTableBean();
         for(Lessons l:gkc){
-            if(l.getLessonCode().equals("3")){
+            if(l.getLessonId()==3){
                 t.setBt1(dateFormat.format(l.getLessonStart()));
             }
-            if(l.getLessonCode().equals("6")){
+            if(l.getLessonId()==6){
                 t.setBt2(dateFormat.format(l.getLessonStart()));
             }
-            if(l.getLessonCode().equals("9")){
+            if(l.getLessonId()==9){
                 t.setBt3(dateFormat.format(l.getLessonStart()));
             }
-            if(l.getLessonCode().equals("12")){
+            if(l.getLessonId()==12){
                 t.setBt4(dateFormat.format(l.getLessonStart()));
             }
-            if(l.getLessonCode().equals("15")){
+            if(l.getLessonId()==15){
                 t.setBt5(dateFormat.format(l.getLessonStart()));
             }
         }
         for(Allocations a:allocations){
-            if(a.getDays().getCode().equals("1")){
+            if(a.getDays().getDayCode()==1){
                 t.setD1(a.getDays().getName());
-                if(a.getLessons().getLessonCode().equals("1")){
+                if(a.getLessons().getLessonId()==1){
                     t.setL1m(a.getSubjects().getTimeTableName());
                     t.setT1(dateFormat.format(a.getLessons().getLessonStart()));
                      t.setC1m(a.getClassName());
                 }
-                if(a.getLessons().getLessonCode().equals("2")){
+                if(a.getLessons().getLessonId()==2){
                     t.setL2m(a.getSubjects().getTimeTableName());
                     t.setT2(dateFormat.format(a.getLessons().getLessonStart()));
                     t.setC2m(a.getClassName());
                 }
-                if(a.getLessons().getLessonCode().equals("4")){
+                if(a.getLessons().getLessonId()==4){
                     t.setL3m(a.getSubjects().getTimeTableName());
                     t.setT3(dateFormat.format(a.getLessons().getLessonStart()));
                     t.setC3m(a.getClassName());
                 }
-                if(a.getLessons().getLessonCode().equals("5")){
+                if(a.getLessons().getLessonId()==5){
                     t.setL4m(a.getSubjects().getTimeTableName());
                     t.setT4(dateFormat.format(a.getLessons().getLessonStart()));
                     t.setC4m(a.getClassName());
                 }
-                if(a.getLessons().getLessonCode().equals("7")){
+                if(a.getLessons().getLessonId()==7){
                     t.setL5m(a.getSubjects().getTimeTableName());
                     t.setT5(dateFormat.format(a.getLessons().getLessonStart()));
                     t.setC5m(a.getClassName());
                 }
-                if(a.getLessons().getLessonCode().equals("8")){
+                if(a.getLessons().getLessonId()==8){
                     t.setL6m(a.getSubjects().getTimeTableName());
                     t.setT6(dateFormat.format(a.getLessons().getLessonStart()));
                     t.setC6m(a.getClassName());
                 }
-                if(a.getLessons().getLessonCode().equals("10")){
+                if(a.getLessons().getLessonId()==10){
                     t.setL7m("PREPS");
                     t.setT7(dateFormat.format(a.getLessons().getLessonStart()));
                     //t.setC7m(a.getClassName());
                 }
-                if(a.getLessons().getLessonCode().equals("11")){
+                if(a.getLessons().getLessonId()==11){
                     t.setL8m(a.getSubjects().getTimeTableName());
                     t.setT8(dateFormat.format(a.getLessons().getLessonStart()));
                     t.setC8m(a.getClassName());
                 }
-                if(a.getLessons().getLessonCode().equals("13")){
+                if(a.getLessons().getLessonId()==13){
                     t.setL9m(a.getSubjects().getTimeTableName());
                     t.setT9(dateFormat.format(a.getLessons().getLessonStart()));
                     t.setC9m(a.getClassName());
                 }
-                if(a.getLessons().getLessonCode().equals("14")){
+                if(a.getLessons().getLessonId()==14){
                     t.setL10m(a.getSubjects().getTimeTableName());
                     t.setT10(dateFormat.format(a.getLessons().getLessonStart()));
                     t.setC10m(a.getClassName());
                 }
             }
-            if(a.getDays().getCode().equals("2")){
+            if(a.getDays().getDayCode()==2){
                 t.setD2(a.getDays().getName());
-                if(a.getLessons().getLessonCode().equals("1")){
+                if(a.getLessons().getLessonId()==1){
                     t.setL1t(a.getSubjects().getTimeTableName());
                     if(t.getT1()==null) {
                         t.setT1(dateFormat.format(a.getLessons().getLessonStart()));
                     }
                     t.setC1t(a.getClassName());
                 }
-                if(a.getLessons().getLessonCode().equals("2")){
+                if(a.getLessons().getLessonId()==2){
                     t.setL2t(a.getSubjects().getTimeTableName());
                     if(t.getT2()==null) {
                         t.setT2(dateFormat.format(a.getLessons().getLessonStart()));
@@ -1407,7 +1407,7 @@ public class ReportsService implements ReportsInterface {
                     t.setC2t(a.getClassName());
 
                 }
-                if(a.getLessons().getLessonCode().equals("4")){
+                if(a.getLessons().getLessonId()==4){
                     t.setL3t(a.getSubjects().getTimeTableName());
                     if(t.getT3()==null) {
                         t.setT3(dateFormat.format(a.getLessons().getLessonStart()));
@@ -1415,7 +1415,7 @@ public class ReportsService implements ReportsInterface {
                     t.setC3t(a.getClassName());
 
                 }
-                if(a.getLessons().getLessonCode().equals("5")){
+                if(a.getLessons().getLessonId()==5){
                     t.setL4t(a.getSubjects().getTimeTableName());
                     if(t.getT4()==null) {
                         t.setT4(dateFormat.format(a.getLessons().getLessonStart()));
@@ -1423,7 +1423,7 @@ public class ReportsService implements ReportsInterface {
                     t.setC4t(a.getClassName());
 
                 }
-                if(a.getLessons().getLessonCode().equals("7")){
+                if(a.getLessons().getLessonId()==7){
                     t.setL5t(a.getSubjects().getTimeTableName());
                     if(t.getT5()==null) {
                         t.setT5(dateFormat.format(a.getLessons().getLessonStart()));
@@ -1431,7 +1431,7 @@ public class ReportsService implements ReportsInterface {
                     t.setC5t(a.getClassName());
 
                 }
-                if(a.getLessons().getLessonCode().equals("8")){
+                if(a.getLessons().getLessonId()==8){
                     t.setL6t(a.getSubjects().getTimeTableName());
                     if(t.getT6()==null) {
                         t.setT6(dateFormat.format(a.getLessons().getLessonStart()));
@@ -1439,7 +1439,7 @@ public class ReportsService implements ReportsInterface {
                     t.setC6t(a.getClassName());
 
                 }
-                if(a.getLessons().getLessonCode().equals("10")){
+                if(a.getLessons().getLessonId()==10){
                     t.setL7t("PREPS");
                     if(t.getT7()==null) {
                         t.setT7(dateFormat.format(a.getLessons().getLessonStart()));
@@ -1447,7 +1447,7 @@ public class ReportsService implements ReportsInterface {
                    // t.setC7t(a.getClassName());
 
                 }
-                if(a.getLessons().getLessonCode().equals("11")){
+                if(a.getLessons().getLessonId()==11){
                     t.setL8t(a.getSubjects().getTimeTableName());
                     if(t.getT8()==null) {
                         t.setT8(dateFormat.format(a.getLessons().getLessonStart()));
@@ -1455,7 +1455,7 @@ public class ReportsService implements ReportsInterface {
                     t.setC8t(a.getClassName());
 
                 }
-                if(a.getLessons().getLessonCode().equals("13")){
+                if(a.getLessons().getLessonId()==13){
                     t.setL9t(a.getSubjects().getTimeTableName());
                     if(t.getT9()==null) {
                         t.setT9(dateFormat.format(a.getLessons().getLessonStart()));
@@ -1463,7 +1463,7 @@ public class ReportsService implements ReportsInterface {
                     t.setC9t(a.getClassName());
 
                 }
-                if(a.getLessons().getLessonCode().equals("14")){
+                if(a.getLessons().getLessonId()==14){
                     t.setL10t(a.getSubjects().getTimeTableName());
                     if(t.getT10()==null) {
                         t.setT10(dateFormat.format(a.getLessons().getLessonStart()));
@@ -1472,72 +1472,72 @@ public class ReportsService implements ReportsInterface {
 
                 }
             }
-            if(a.getDays().getCode().equals("3")){
+            if(a.getDays().getDayCode()==3){
                 t.setD3(a.getDays().getName());
-                if(a.getLessons().getLessonCode().equals("1")){
+                if(a.getLessons().getLessonId()==1){
                     t.setL1w(a.getSubjects().getTimeTableName());
                     if(t.getT1()==null) {
                         t.setT1(dateFormat.format(a.getLessons().getLessonStart()));
                     }
                     t.setC1w(a.getClassName());
                 }
-                if(a.getLessons().getLessonCode().equals("2")){
+                if(a.getLessons().getLessonId()==2){
                     t.setL2w(a.getSubjects().getTimeTableName());
                     if(t.getT2()==null) {
                         t.setT2(dateFormat.format(a.getLessons().getLessonStart()));
                     }
                     t.setC2w(a.getClassName());
                 }
-                if(a.getLessons().getLessonCode().equals("4")){
+                if(a.getLessons().getLessonId()==4){
                     t.setL3w(a.getSubjects().getTimeTableName());
                     if(t.getT3()==null) {
                         t.setT3(dateFormat.format(a.getLessons().getLessonStart()));
                     }
                     t.setC3w(a.getClassName());
                 }
-                if(a.getLessons().getLessonCode().equals("5")){
+                if(a.getLessons().getLessonId()==5){
                     t.setL4w(a.getSubjects().getTimeTableName());
                     if(t.getT4()==null) {
                         t.setT4(dateFormat.format(a.getLessons().getLessonStart()));
                     }
                     t.setC4w(a.getClassName());
                 }
-                if(a.getLessons().getLessonCode().equals("7")){
+                if(a.getLessons().getLessonId()==7){
                     t.setL5w(a.getSubjects().getTimeTableName());
                     if(t.getT5()==null) {
                         t.setT5(dateFormat.format(a.getLessons().getLessonStart()));
                     }
                     t.setC5w(a.getClassName());
                 }
-                if(a.getLessons().getLessonCode().equals("8")){
+                if(a.getLessons().getLessonId()==8){
                     t.setL6w(a.getSubjects().getTimeTableName());
                     if(t.getT6()==null) {
                         t.setT6(dateFormat.format(a.getLessons().getLessonStart()));
                     }
                     t.setC6w(a.getClassName());
                 }
-                if(a.getLessons().getLessonCode().equals("10")){
+                if(a.getLessons().getLessonId()==10){
                     t.setL7w("PREPS");
                     if(t.getT7()==null) {
                         t.setT7(dateFormat.format(a.getLessons().getLessonStart()));
                     }
                    // t.setC7w(a.getClassName());
                 }
-                if(a.getLessons().getLessonCode().equals("11")){
+                if(a.getLessons().getLessonId()==11){
                     t.setL8w(a.getSubjects().getTimeTableName());
                     if(t.getT8()==null) {
                         t.setT8(dateFormat.format(a.getLessons().getLessonStart()));
                     }
                     t.setC8w(a.getClassName());
                 }
-                if(a.getLessons().getLessonCode().equals("13")){
+                if(a.getLessons().getLessonId()==13){
                     t.setL9w(a.getSubjects().getTimeTableName());
                     if(t.getT9()==null) {
                         t.setT9(dateFormat.format(a.getLessons().getLessonStart()));
                     }
                     t.setC9w(a.getClassName());
                 }
-                if(a.getLessons().getLessonCode().equals("14")){
+                if(a.getLessons().getLessonId()==14){
                     t.setL10w(a.getSubjects().getTimeTableName());
                     if(t.getT10()==null) {
                         t.setT10(dateFormat.format(a.getLessons().getLessonStart()));
@@ -1545,16 +1545,16 @@ public class ReportsService implements ReportsInterface {
                     t.setC10w(a.getClassName());
                 }
             }
-            if(a.getDays().getCode().equals("4")){
+            if(a.getDays().getDayCode()==4){
                 t.setD4(a.getDays().getName());
-                if(a.getLessons().getLessonCode().equals("1")){
+                if(a.getLessons().getLessonId()==1){
                     t.setL1th(a.getSubjects().getTimeTableName());
                     if(t.getT1()==null) {
                         t.setT1(dateFormat.format(a.getLessons().getLessonStart()));
                     }
                     t.setC1th(a.getClassName());
                 }
-                if(a.getLessons().getLessonCode().equals("2")){
+                if(a.getLessons().getLessonId()==2){
                     t.setL2th(a.getSubjects().getTimeTableName());
                     if(t.getT2()==null) {
                         t.setT2(dateFormat.format(a.getLessons().getLessonStart()));
@@ -1562,7 +1562,7 @@ public class ReportsService implements ReportsInterface {
                     t.setC2th(a.getClassName());
 
                 }
-                if(a.getLessons().getLessonCode().equals("4")){
+                if(a.getLessons().getLessonId()==4){
                     t.setL3th(a.getSubjects().getTimeTableName());
                     if(t.getT3()==null) {
                         t.setT3(dateFormat.format(a.getLessons().getLessonStart()));
@@ -1570,7 +1570,7 @@ public class ReportsService implements ReportsInterface {
                     t.setC3th(a.getClassName());
 
                 }
-                if(a.getLessons().getLessonCode().equals("5")){
+                if(a.getLessons().getLessonId()==5){
                     t.setL4th(a.getSubjects().getTimeTableName());
                     if(t.getT4()==null) {
                         t.setT4(dateFormat.format(a.getLessons().getLessonStart()));
@@ -1578,7 +1578,7 @@ public class ReportsService implements ReportsInterface {
                     t.setC4th(a.getClassName());
 
                 }
-                if(a.getLessons().getLessonCode().equals("7")){
+                if(a.getLessons().getLessonId()==7){
                     t.setL5th(a.getSubjects().getTimeTableName());
                     if(t.getT5()==null) {
                         t.setT5(dateFormat.format(a.getLessons().getLessonStart()));
@@ -1586,7 +1586,7 @@ public class ReportsService implements ReportsInterface {
                     t.setC5th(a.getClassName());
 
                 }
-                if(a.getLessons().getLessonCode().equals("8")){
+                if(a.getLessons().getLessonId()==8){
                     t.setL6th(a.getSubjects().getTimeTableName());
                     if(t.getT6()==null) {
                         t.setT6(dateFormat.format(a.getLessons().getLessonStart()));
@@ -1594,7 +1594,7 @@ public class ReportsService implements ReportsInterface {
                     t.setC6th(a.getClassName());
 
                 }
-                if(a.getLessons().getLessonCode().equals("10")){
+                if(a.getLessons().getLessonId()==10){
                     t.setL7th("PREPS");
                     if(t.getT7()==null) {
                         t.setT7(dateFormat.format(a.getLessons().getLessonStart()));
@@ -1602,7 +1602,7 @@ public class ReportsService implements ReportsInterface {
                     //t.setC7th(a.getClassName());
 
                 }
-                if(a.getLessons().getLessonCode().equals("11")){
+                if(a.getLessons().getLessonId()==11){
                     t.setL8th(a.getSubjects().getTimeTableName());
                     if(t.getT8()==null) {
                         t.setT8(dateFormat.format(a.getLessons().getLessonStart()));
@@ -1610,7 +1610,7 @@ public class ReportsService implements ReportsInterface {
                     t.setC8th(a.getClassName());
 
                 }
-                if(a.getLessons().getLessonCode().equals("13")){
+                if(a.getLessons().getLessonId()==13){
                     t.setL9th(a.getSubjects().getTimeTableName());
                     if(t.getT9()==null) {
                         t.setT9(dateFormat.format(a.getLessons().getLessonStart()));
@@ -1618,7 +1618,7 @@ public class ReportsService implements ReportsInterface {
                     t.setC9th(a.getClassName());
 
                 }
-                if(a.getLessons().getLessonCode().equals("14")){
+                if(a.getLessons().getLessonId()==14){
                     t.setL10th(a.getSubjects().getTimeTableName());
                     if(t.getT10()==null) {
                         t.setT10(dateFormat.format(a.getLessons().getLessonStart()));
@@ -1627,9 +1627,9 @@ public class ReportsService implements ReportsInterface {
 
                 }
             }
-            if(a.getDays().getCode().equals("5")){
+            if(a.getDays().getDayCode()==5){
                 t.setD5(a.getDays().getName());
-                if(a.getLessons().getLessonCode().equals("1")){
+                if(a.getLessons().getLessonId()==1){
                     t.setL1f(a.getSubjects().getTimeTableName());
                     if(t.getT1()==null) {
                         t.setT1(dateFormat.format(a.getLessons().getLessonStart()));
@@ -1637,7 +1637,7 @@ public class ReportsService implements ReportsInterface {
                     t.setC1f(a.getClassName());
 
                 }
-                if(a.getLessons().getLessonCode().equals("2")){
+                if(a.getLessons().getLessonId()==2){
                     t.setL2f(a.getSubjects().getTimeTableName());
                     if(t.getT2()==null) {
                         t.setT2(dateFormat.format(a.getLessons().getLessonStart()));
@@ -1645,7 +1645,7 @@ public class ReportsService implements ReportsInterface {
                     t.setC2f(a.getClassName());
 
                 }
-                if(a.getLessons().getLessonCode().equals("4")){
+                if(a.getLessons().getLessonId()==4){
                     t.setL3f(a.getSubjects().getTimeTableName());
                     if(t.getT3()==null) {
                         t.setT3(dateFormat.format(a.getLessons().getLessonStart()));
@@ -1653,7 +1653,7 @@ public class ReportsService implements ReportsInterface {
                     t.setC3f(a.getClassName());
 
                 }
-                if(a.getLessons().getLessonCode().equals("5")){
+                if(a.getLessons().getLessonId()==5){
                     t.setL4f(a.getSubjects().getTimeTableName());
                     if(t.getT4()==null) {
                         t.setT4(dateFormat.format(a.getLessons().getLessonStart()));
@@ -1661,7 +1661,7 @@ public class ReportsService implements ReportsInterface {
                     t.setC4f(a.getClassName());
 
                 }
-                if(a.getLessons().getLessonCode().equals("7")){
+                if(a.getLessons().getLessonId()==7){
                     t.setL5f(a.getSubjects().getTimeTableName());
                     if(t.getT5()==null) {
                         t.setT5(dateFormat.format(a.getLessons().getLessonStart()));
@@ -1669,7 +1669,7 @@ public class ReportsService implements ReportsInterface {
                     t.setC5f(a.getClassName());
 
                 }
-                if(a.getLessons().getLessonCode().equals("8")){
+                if(a.getLessons().getLessonId()==8){
                     t.setL6f(a.getSubjects().getTimeTableName());
                     if(t.getT6()==null) {
                         t.setT6(dateFormat.format(a.getLessons().getLessonStart()));
@@ -1677,7 +1677,7 @@ public class ReportsService implements ReportsInterface {
                     t.setC6f(a.getClassName());
 
                 }
-                if(a.getLessons().getLessonCode().equals("10")){
+                if(a.getLessons().getLessonId()==10){
                     t.setL7f("PREPS");
                     if(t.getT7()==null) {
                         t.setT7(dateFormat.format(a.getLessons().getLessonStart()));
@@ -1685,7 +1685,7 @@ public class ReportsService implements ReportsInterface {
                     //t.setC7f(a.getClassName());
 
                 }
-                if(a.getLessons().getLessonCode().equals("11")){
+                if(a.getLessons().getLessonId()==11){
                     t.setL8f(a.getSubjects().getTimeTableName());
                     if(t.getT8()==null) {
                         t.setT8(dateFormat.format(a.getLessons().getLessonStart()));
@@ -1693,7 +1693,7 @@ public class ReportsService implements ReportsInterface {
                     t.setC8f(a.getClassName());
 
                 }
-                if(a.getLessons().getLessonCode().equals("13")){
+                if(a.getLessons().getLessonId()==13){
                     t.setL9f(a.getSubjects().getTimeTableName());
                     if(t.getT9()==null) {
                         t.setT9(dateFormat.format(a.getLessons().getLessonStart()));
@@ -1701,7 +1701,7 @@ public class ReportsService implements ReportsInterface {
                     t.setC9f(a.getClassName());
 
                 }
-                if(a.getLessons().getLessonCode().equals("14")){
+                if(a.getLessons().getLessonId()==14){
                     t.setL10f(a.getSubjects().getTimeTableName());
                     if(t.getT10()==null) {
                         t.setT10(dateFormat.format(a.getLessons().getLessonStart()));

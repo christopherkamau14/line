@@ -42,7 +42,7 @@
             <div class="row" style="margin-top: 1em;margin-bottom: 1em">
                 <div class="col-md-2 col-xs-12">
                         <input name="lessonCode" id="lesson-code" class="form-control"
-                               placeholder="" required>
+                               placeholder="" readonly>
                 </div>
                 <div class="col-md-2 col-xs-12">
                     <input name="lessonName" id="lesson-name" class="form-control"

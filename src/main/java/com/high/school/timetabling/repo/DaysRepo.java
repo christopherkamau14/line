@@ -10,7 +10,5 @@ public interface DaysRepo extends JpaRepository<Days,Long>, DataTablesRepository
 
     Days findByDayCode(Long dayCode);
 
-    Days findByCode(String code);
-
     Page<Days> findByNameContainingIgnoreCase(String term, Pageable pageable);
 }

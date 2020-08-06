@@ -4,15 +4,13 @@ import javax.persistence.*;
 
 @Entity
 @Table(name="days_setups")
+@SequenceGenerator(name="dayseq", initialValue=1, allocationSize=100)
 public class Days {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy=GenerationType.SEQUENCE, generator="dayseq")
     @Column(name = "day_id")
     private Long dayCode;
-
-    @Column(name = "day_code")
-    private String code;
 
     @Column(name = "day_name")
     private String name;
@@ -23,14 +21,6 @@ public class Days {
 
     public void setDayCode(Long dayCode) {
         this.dayCode = dayCode;
-    }
-
-    public String getCode() {
-        return code;
-    }
-
-    public void setCode(String code) {
-        this.code = code;
     }
 
     public String getName() {

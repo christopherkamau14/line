@@ -53,19 +53,14 @@ public class TimetableService implements TimetableInterface {
     @Override
     public void saveDays(Days days) throws BadRequestException {
         if(days.getDayCode()==null){
-            Days d=daysRepo.findByCode(days.getCode());
-            if(d==null){
+
                 daysRepo.save(days);
             }
-            else {
-                throw new BadRequestException("Day Code already booked");
-            }
-        }
+
         else {
 
                 Days days1 = daysRepo.findByDayCode(days.getDayCode());
 
-                days1.setCode(days.getCode());
                 days1.setName(days.getName());
                 daysRepo.save(days1);
 
@@ -88,19 +83,12 @@ public class TimetableService implements TimetableInterface {
         String auto="";
         auto=lessons.getAutoLesson()==null?"N":"Y";
         if(lessons.getLessonId()==null) {
-            Lessons l = lessonRepo.findByLessonCodeOrLessonNameOrLessonStartOrLessonEnd(lessons.getLessonCode(), lessons.getLessonName(), lessons.getLessonStart(), lessons.getLessonEnd());
-            if (l == null) {
-                lessons.setAutoLesson(auto);
+           lessons.setAutoLesson(auto);
                 lessonRepo.save(lessons);
-            }
-            else {
-                throw new BadRequestException("Lesson is already assigned");
-            }
         }
            else{
                Lessons le=lessonRepo.findByLessonId(lessons.getLessonId());
                le.setAutoLesson(auto);
-               le.setLessonCode(lessons.getLessonCode());
                le.setLessonStart(lessons.getLessonStart());
                le.setLessonEnd(lessons.getLessonEnd());
                le.setLessonName(lessons.getLessonName());

@@ -14,7 +14,7 @@ deleteLessons();
 })
 function saveLesson() {
     $('#btn-save-lesson').on('click',function () {
-        if($("#lesson-code").val()==='' ||$("#lesson-name").val()===''||
+        if($("#lesson-name").val()===''||
             $("#lesson-start").val()===''||$("#lesson-end").val()===''
         ){
             bootbox.alert("Input a lesson to save");
@@ -73,7 +73,7 @@ function getLessonsTab() {
         pageLength: 20,
         destroy: true,
         columns: [
-            { data: "lessonCode" },
+            { data: "lessonId" },
             { data: "lessonName" },
             {data:"lessonStart",
                 render: function ( data, type, full, meta ) {
@@ -87,7 +87,7 @@ function getLessonsTab() {
                 }
 
             },
-            { data: "lessonCode" }
+            { data: "lessonId" }
         ]
     } );
     $.fn.dataTable.ext.errMode = 'none';
@@ -100,7 +100,7 @@ function getLessonsTab() {
         $(this).addClass('active').siblings().removeClass('active');
         var aData = table.rows('.active').data();
         $('#lesson-id').val(aData[0].lessonId);
-        $('#lesson-code').val(aData[0].lessonCode);
+        $('#lesson-code').val(aData[0].lessonId);
         $('#lesson-name').val(aData[0].lessonName);
         $('#lesson-start').val(moment(aData[0].lessonStart).format('hh:mm:ss A'));
         $('#lesson-end').val(moment(aData[0].lessonEnd).format('hh:mm:ss A'));

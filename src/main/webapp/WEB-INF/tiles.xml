@@ -258,4 +258,14 @@
         <put-attribute name="body" value="/WEB-INF/pages/timetabling/lessons.jsp" />
     </definition>
 
+    <definition name="stores" extends="base.definition">
+        <put-attribute name="title" value="Leaveout Information" />
+        <put-attribute name="body" value="/WEB-INF/pages/library/stores.jsp" />
+    </definition>
+
+    <definition name="stationery" extends="base.definition">
+        <put-attribute name="title" value="Leaveout Information" />
+        <put-attribute name="body" value="/WEB-INF/pages/library/stationery.jsp" />
+    </definition>
+
 </tiles-definitions>

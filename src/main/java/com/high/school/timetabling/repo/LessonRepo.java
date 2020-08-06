@@ -9,11 +9,8 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import java.util.Date;
 
 public interface LessonRepo extends JpaRepository<Lessons,Long>, DataTablesRepository<Lessons,Long> {
-    Lessons findByLessonCodeOrLessonNameOrLessonStartOrLessonEnd(String lessonCode, String lessonName, Date lessonStart, Date lessonEnd);
 
     Lessons findByLessonId(Long lessonId);
-
-    Page<Lessons> findByLessonNameContainingIgnoreCase(String term, Pageable pageable);
 
     Page<Lessons> findByLessonNameLikeIgnoreCase(String s, Pageable pageable);
 
