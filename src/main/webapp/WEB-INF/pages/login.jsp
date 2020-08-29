@@ -51,7 +51,7 @@
                 <div class="clearfix"></div>
 
                 <div class="separator">
-                    <div>
+                    <div class="col-md-6">
                         <button type="button" id="btn-forgot-password"  onclick="forgotPassword()" class="btn btn-link">Forgot Password</button>
                     </div>
 

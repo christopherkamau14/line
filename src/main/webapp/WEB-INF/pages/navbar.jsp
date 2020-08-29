@@ -96,17 +96,17 @@
                     </li>
                     <li><a><i class="fa fa-book"></i> Library Manager <span class="fa fa-chevron-down"></span></a>
                         <ul class="nav child_menu">
-                            <li><a href="<c:url value="#"/>">Stores</a></li>
-                            <li><a href="<c:url value="#"/>">Stationery</a></li>
-                            <li><a href="<c:url value="#"/>">Shelves</a></li>
-                            <li><a href="<c:url value="#"/>">Library Category Setup</a></li>
-                            <li><a href="<c:url value="#"/>">Book Classification</a></li>
-                            <li><a href="<c:url value="#"/>">Stationery Registration</a></li>
-                            <li><a href="<c:url value="#"/>">Book Registration</a></li>
-                            <li><a href="<c:url value="#"/>">Stationery issuing</a></li>
-                            <li><a href="<c:url value="#"/>">Book Issue</a></li>
-                            <li><a href="<c:url value="#"/>">Book Cost</a></li>
-                            <li><a href="<c:url value="#"/>">Items Given Out</a></li>
+                            <li><a href="<c:url value="/protected/library/stores"/>">Stores</a></li>
+                            <li><a href="<c:url value="/protected/library/stationery"/>">Stationery</a></li>
+                            <li><a href="<c:url value="/protected/library/shelves"/>">Shelves</a></li>
+                            <li><a href="<c:url value="/protected/library/category"/>">Library Category Setup</a></li>
+                            <li><a href="<c:url value="/protected/library/bookclass"/>">Book Classification</a></li>
+                            <li><a href="<c:url value="/protected/library/regStationery"/>">Stationery Registration</a></li>
+                            <li><a href="<c:url value="/protected/library/regbooks"/>">Book Registration</a></li>
+                            <li><a href="<c:url value="/protected/library/statissue"/>">Stationery issuing</a></li>
+                            <li><a href="<c:url value="/protected/library/bookIssue"/>">Book Issue</a></li>
+                            <li><a href="<c:url value="/protected/library/costs"/>">Book Cost</a></li>
+                            <li><a href="<c:url value="/protected/library/items"/>">Items Given Out</a></li>
                             <%--<sec:authorize access="hasAnyAuthority('ACCESS_RECEIPT')">--%>
                             <%--<li><a href="<c:url value="/protected/uw/receipts/mobmoney"/>">Mobile Money Trans</a></li>--%>
                             <%--</sec:authorize>--%>

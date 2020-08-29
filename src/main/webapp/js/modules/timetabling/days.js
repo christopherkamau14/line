@@ -4,7 +4,13 @@ $(document).ready(function () {
  saveDay()
 getDaysTab()
     deleteDays()
+    newDay()
 })
+function newDay(){
+    $('#btn-new-day').click(function (){
+        window.location.reload();
+    })
+}
 function saveDay() {
     $('#btn-save-day').on('click',function () {
         if($("#name").val()===''){

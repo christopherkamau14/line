@@ -1008,6 +1008,14 @@ public class ReportsService implements ReportsInterface {
             if(l.getLessonId()==15){
                 t.setBt5(dateFormat.format(l.getLessonStart()));
             }
+            if(l.getLessonId()==10){
+                t.setL7m(l.getLessonName());
+                t.setT7(dateFormat.format(l.getLessonStart()));
+                t.setL7t(l.getLessonName());
+                t.setL7w(l.getLessonName());
+                t.setL7th(l.getLessonName());
+                t.setL7f(l.getLessonName());
+            }
         }
         for(Allocations a:allocations){
             if(a.getDays().getDayCode()==1){

@@ -17,6 +17,7 @@
     <div class="x_title">
         Stores Setups
     </div>
+    <button type="button" class="btn btn-default pull-left" id="btn-new-stores">New</button>
 
     <button type="button" class="btn btn-success pull-left" id="btn-save-store">Save</button>
     <button type="button" class="btn btn-danger pull-left" id="btn-delete-store">Delete</button>

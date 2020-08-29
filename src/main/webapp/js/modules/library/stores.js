@@ -8,8 +8,29 @@ $(function() {
         saveStationery()
         deleteStationery()
         getStationeryTab()
+        newStore()
+        newStationery()
+        saveShelf()
+        getShelvesTab()
+        deleteShelf()
+        newShelf()
     })
 });
+function newStore(){
+    $('#btn-new-stores').click(function (){
+        window.location.reload();
+    })
+}
+function newShelf(){
+    $('#btn-new-shelves').click(function (){
+        window.location.reload();
+    })
+}
+function newStationery(){
+    $('#btn-new-stationery').click(function (){
+        window.location.reload();
+    })
+}
 function saveStore(){
     $('#btn-save-store').on('click',function () {
         if($("#name").val()===''){
@@ -234,6 +255,122 @@ function deleteStationery() {
                         });
                         $("#stationery-tbl").DataTable().ajax.reload();
                         $("#stationery-code").val("");
+                        $("#name").val("");
+                        $("#code").val("");
+                    }).fail(function (xhr, error) {
+                        new PNotify({
+                            title: 'Error',
+                            text: xhr.responseText,
+                            type: 'error',
+                            styling: 'bootstrap3'
+                        });
+                    })
+
+                }
+            })
+        }
+    })
+
+}
+function saveShelf(){
+    $('#btn-save-shelves').on('click',function () {
+        if($("#name").val()===''){
+            bootbox.alert("Input a shelf to save");
+        }else {
+            var $currForm = $('#shelves-form');
+            var currValidator = $currForm.validate();
+            if (!$currForm.valid()) {
+                return;
+            }
+            var data = {};
+            $currForm.serializeArray().map(function (x) {
+                data[x.name] = x.value;
+            });
+            var url = "saveShelves";
+            var request = $.post(url, data);
+
+            request.success(function () {
+                new PNotify({
+                    title: 'Success',
+                    text: 'Shelf created/updated Successfully',
+                    type: 'success',
+                    styling: 'bootstrap3'
+                });
+                $('#shelves-tbl').DataTable().ajax.reload();
+                currValidator.resetForm();
+                $("#shelf-code").val("");
+                $("#name").val("");
+                $("#code").val("");
+
+            });
+            request.error(function (jqXHR, textStatus, errorThrown) {
+                new PNotify({
+                    title: 'Error',
+                    text: jqXHR.responseText,
+                    type: 'error',
+                    styling: 'bootstrap3'
+                });
+            });
+            request.always(function () {
+                //	$btn.button('reset');
+            });
+        }
+    })
+}
+function getShelvesTab() {
+
+    var table=$('#shelves-tbl').DataTable( {
+        processing: true,
+        serverSide: true,
+        ajax: {
+            url:'getShelvesTbl'
+        },
+        scrollY:"400px",
+        dom:'t',
+        lengthMenu: [ [10, 15], [10, 15] ],
+        pageLength: 15,
+        destroy: true,
+        columns: [
+            { data: "shelfName" },
+
+        ]
+    } );
+    $.fn.dataTable.ext.errMode = 'none';
+
+    $('#shelves-tbl').on( 'error.dt', function ( e, settings, techNote, message ) {
+        console.log( 'An error has been reported by DataTables: ', message );
+    } ) ;
+
+    $('#shelves-tbl').on( 'click', 'tbody tr', function () {
+        $(this).addClass('active').siblings().removeClass('active');
+        var aData = table.rows('.active').data();
+        $('#shelf-code').val(aData[0].shelfId);
+        $('#code').val(aData[0].shelfId);
+        $('#name').val(aData[0].shelfName);
+    })
+    return table;
+}
+function deleteShelf() {
+    $('#btn-delete-shelves').on('click', function () {
+        var data = $('#shelf-code').val();
+        if (data === '') {
+            bootbox.alert("Select Shelf to delete");
+        } else {
+            var url = 'deleteShelves/' + data;
+            bootbox.confirm("Are you sure want to delete this Shelf?", function (result) {
+                if (result) {
+                    $.ajax({
+                        type: 'GET',
+                        url: url,
+                    }).done(function (s) {
+                        new PNotify({
+                            title: 'Success',
+                            text: 'Deleted Successfully',
+                            type: 'success',
+                            styling: 'bootstrap3'
+                        });
+                        $("#shelves-tbl").DataTable().ajax.reload();
+                        $("#shelf-code").val("");
                         $("#name").val("");
                         $("#code").val("");
                     }).fail(function (xhr, error) {

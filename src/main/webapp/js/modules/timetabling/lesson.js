@@ -4,6 +4,7 @@ $(document).ready(function () {
 saveLesson();
 getLessonsTab();
 deleteLessons();
+newLessons()
     $(".datepicker-input").each(function() {
         $(this).datetimepicker({
             format: 'LT',
@@ -12,6 +13,11 @@ deleteLessons();
 
     });
 })
+function newLessons(){
+    $('#btn-new-lesson').click(function (){
+        window.location.reload();
+    })
+}
 function saveLesson() {
     $('#btn-save-lesson').on('click',function () {
         if($("#lesson-name").val()===''||

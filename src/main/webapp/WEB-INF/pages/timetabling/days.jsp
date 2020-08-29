@@ -24,6 +24,7 @@
     <div class="x_title">
         Days Setups
     </div>
+    <button type="button" class="btn btn-default pull-left" id="btn-new-day">New</button>
 
 <button type="button" class="btn btn-success pull-left" id="btn-save-day">Save</button>
     <button type="button" class="btn btn-danger pull-left" id="btn-delete-day">Delete</button>

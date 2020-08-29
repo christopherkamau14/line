@@ -537,7 +537,7 @@ function searchAllocTbl() {
 
 }
 function searchTeFc1() {
-    $('#subject-id').on('keyup', function () {
+    $('#subject-id').on('input', function () {
         $('#allocation-tbl').DataTable()
             .columns(3)
             .search(this.value)
@@ -545,7 +545,7 @@ function searchTeFc1() {
     });
 }
 function searchTeFc2() {
-    $('#day-id').on('keyup', function () {
+    $('#day-id').on('input', function () {
         $('#allocation-tbl').DataTable()
             .columns(4)
             .search(this.value)
@@ -553,7 +553,7 @@ function searchTeFc2() {
     });
 }
 function searchTeFc3() {
-    $('#class-id').on('keyup', function () {
+    $('#class-id').on('input', function () {
         $('#allocation-tbl').DataTable()
             .columns(5)
             .search(this.value)
@@ -561,7 +561,7 @@ function searchTeFc3() {
     });
 }
 function searchTeFc4() {
-    $('#teacher-id').on('keyup', function () {
+    $('#teacher-id').on('input', function () {
         $('#allocation-tbl').DataTable()
             .columns(11)
             .search(this.value)

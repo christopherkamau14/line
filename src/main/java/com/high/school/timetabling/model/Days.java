@@ -4,7 +4,7 @@ import javax.persistence.*;
 
 @Entity
 @Table(name="days_setups")
-@SequenceGenerator(name="dayseq", initialValue=1, allocationSize=100)
+@SequenceGenerator(name="dayseq", initialValue=1, allocationSize=1)
 public class Days {
 
     @Id

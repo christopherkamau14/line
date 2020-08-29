@@ -5,7 +5,7 @@ import java.util.Date;
 
 @Entity
 @Table(name="lessons_setups")
-@SequenceGenerator(name="lessonseq", initialValue=1, allocationSize=100)
+@SequenceGenerator(name="lessonseq", initialValue=1, allocationSize=1)
 public class Lessons {
 
     @Id

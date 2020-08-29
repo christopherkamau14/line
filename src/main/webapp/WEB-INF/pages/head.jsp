@@ -13,6 +13,7 @@
     <meta http-equiv='cache-control' content='no-cache'>
     <meta http-equiv='expires' content='0'>
     <meta http-equiv='pragma' content='no-cache'>
+    <title><spring:message  code="project.title" /></title>
     <!-- Bootstrap -->
     <link type="text/css" href="<c:url value='/libs/bootstrap/dist/css/bootstrap.min.css' /> "  rel="stylesheet">
     <!-- Font Awesome -->

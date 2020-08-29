@@ -17,6 +17,7 @@
     <div class="x_title">
         Lessons Setups
     </div>
+    <button type="button" class="btn btn-default pull-left" id="btn-new-lesson">New</button>
 
     <button type="button" class="btn btn-success pull-left" id="btn-save-lesson">Save</button>
     <button type="button" class="btn btn-danger pull-left" id="btn-delete-lesson">Delete</button>

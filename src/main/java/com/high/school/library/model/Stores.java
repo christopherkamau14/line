@@ -4,7 +4,7 @@ import javax.persistence.*;
 
 @Entity
 @Table(name="stores_table")
-@SequenceGenerator(name="seq", initialValue=1, allocationSize=100)
+@SequenceGenerator(name="seq", initialValue=1, allocationSize=1)
 public class Stores {
 
     @Id

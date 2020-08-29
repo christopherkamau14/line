@@ -268,4 +268,49 @@
         <put-attribute name="body" value="/WEB-INF/pages/library/stationery.jsp" />
     </definition>
 
+    <definition name="shelves" extends="base.definition">
+        <put-attribute name="title" value="Leaveout Information" />
+        <put-attribute name="body" value="/WEB-INF/pages/library/shelves.jsp" />
+    </definition>
+
+    <definition name="category" extends="base.definition">
+        <put-attribute name="title" value="Leaveout Information" />
+        <put-attribute name="body" value="/WEB-INF/pages/library/libcategory.jsp" />
+    </definition>
+
+    <definition name="bookclass" extends="base.definition">
+        <put-attribute name="title" value="Leaveout Information" />
+        <put-attribute name="body" value="/WEB-INF/pages/library/bookclass.jsp" />
+    </definition>
+
+    <definition name="regStationery" extends="base.definition">
+        <put-attribute name="title" value="Leaveout Information" />
+        <put-attribute name="body" value="/WEB-INF/pages/library/stationeryreg.jsp" />
+    </definition>
+
+    <definition name="regbooks" extends="base.definition">
+        <put-attribute name="title" value="Leaveout Information" />
+        <put-attribute name="body" value="/WEB-INF/pages/library/bookregistration.jsp" />
+    </definition>
+
+    <definition name="statissue" extends="base.definition">
+        <put-attribute name="title" value="Leaveout Information" />
+        <put-attribute name="body" value="/WEB-INF/pages/library/stationeryissuing.jsp" />
+    </definition>
+
+    <definition name="bookIssue" extends="base.definition">
+        <put-attribute name="title" value="Leaveout Information" />
+        <put-attribute name="body" value="/WEB-INF/pages/library/bookissuing.jsp" />
+    </definition>
+
+    <definition name="items" extends="base.definition">
+        <put-attribute name="title" value="Leaveout Information" />
+        <put-attribute name="body" value="/WEB-INF/pages/library/itemsgiven.jsp" />
+    </definition>
+
+
+    <definition name="costs" extends="base.definition">
+        <put-attribute name="title" value="Leaveout Information" />
+        <put-attribute name="body" value="/WEB-INF/pages/library/bookcosts.jsp" />
+    </definition>
 </tiles-definitions>

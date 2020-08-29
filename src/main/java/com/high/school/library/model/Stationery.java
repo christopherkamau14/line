@@ -4,7 +4,7 @@ import javax.persistence.*;
 
 @Entity
 @Table(name="stationery_table")
-@SequenceGenerator(name="statseq", initialValue=1, allocationSize=100)
+@SequenceGenerator(name="statseq", initialValue=1, allocationSize=1)
 public class Stationery {
 
     @Id
