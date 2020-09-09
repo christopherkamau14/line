@@ -42,7 +42,7 @@
     <!-- Hibernate -->
 
     <hibernate.version>5.3.5.Final</hibernate.version>
-    <hibernate-validator.version>5.4.1.Final</hibernate-validator.version>
+    <hibernate-validator.version>5.4.2.Final</hibernate-validator.version>
     <c3p0.version>0.9.5.2</c3p0.version>
 
 
