@@ -48,7 +48,7 @@
 
     <!-- Apache commons -->
     <commons-dbcp.version>1.4</commons-dbcp.version>
-    <commons-io.version>2.4</commons-io.version>
+    <commons-io.version>2.7</commons-io.version>
     <commons-lang3.version>3.4</commons-lang3.version>
     <!-- MySQL JDBC Driver -->
     <mysql-connector-java.version>5.1.36</mysql-connector-java.version>
