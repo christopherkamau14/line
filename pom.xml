@@ -21,7 +21,7 @@
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     <maven.compiler.source>1.7</maven.compiler.source>
     <maven.compiler.target>1.7</maven.compiler.target>
-    <spring-framework.version>5.2.1.RELEASE</spring-framework.version>
+    <spring-framework.version>5.2.20.RELEASE</spring-framework.version>
     <spring-data-jpa.version>2.2.4.RELEASE</spring-data-jpa.version>
 
     <!-- Spring Security -->
